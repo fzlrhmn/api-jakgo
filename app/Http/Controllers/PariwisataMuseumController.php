@@ -8,6 +8,9 @@ use App\Http\Requests;
 
 class PariwisataMuseumController extends Controller
 {
+    /**
+     * @return array|\Illuminate\Http\JsonResponse|null
+     */
     public function getMuseum() {
 
         # query with selected columns from getColumns
@@ -19,6 +22,10 @@ class PariwisataMuseumController extends Controller
         return $this->generateResult($resultMuseum);
     }
 
+    /**
+     * @param $id
+     * @return array|\Illuminate\Http\JsonResponse|null
+     */
     public function getMuseumById( $id ) {
 
         # query with selected columns from getColumns
@@ -146,6 +153,9 @@ class PariwisataMuseumController extends Controller
         return $result;
     }
 
+    /**
+     * @return array
+     */
     private function getColumns() {
         return [
             DB::raw('ST_ASGEOJSON(the_geom) as geometry'),
