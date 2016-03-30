@@ -24,7 +24,7 @@ class PariwisataMuseumController extends Controller
         # query with selected columns from getColumns
         $resultMuseum = DB::table('pariwisata_museum')
             ->select($this->getColumns())
-            ->where('id', $id)
+            ->whereIn('id', explode(",",$id))
             ->where('deleted', 0)
             ->get();
 
@@ -56,7 +56,9 @@ class PariwisataMuseumController extends Controller
                         'kode_kota' => (int) $museum->kode_kota,
                         'kode_kecamatan' => (int) $museum->kode_kecamatan,
                         'kode_kelurahan' => (int) $museum->kode_kelurahan,
-                        'shape' => $museum->geometry_text,
+                        'shape' => $museum->geometry,
+                        'latitude' => $museum->latitude,
+                        'longitude' => $museum->longitude,
                     ];
                 })
                 ->toArray();
@@ -112,6 +114,8 @@ class PariwisataMuseumController extends Controller
                             'kode_kota' => (int) $museum->kode_kota,
                             'kode_kecamatan' => (int) $museum->kode_kecamatan,
                             'kode_kelurahan' => (int) $museum->kode_kelurahan,
+                            'latitude' => $museum->latitude,
+                            'longitude' => $museum->longitude,
                             'shape' => $museum->geometry_text,
                         ];
                     }else{
@@ -123,7 +127,9 @@ class PariwisataMuseumController extends Controller
                             'link' => $museum->link,
                             'kode_kota' => (int) $museum->kode_kota,
                             'kode_kecamatan' => (int) $museum->kode_kecamatan,
-                            'kode_kelurahan' => (int) $museum->kode_kelurahan
+                            'kode_kelurahan' => (int) $museum->kode_kelurahan,
+                            'latitude' => $museum->latitude,
+                            'longitude' => $museum->longitude,
                         ];
                     }
                 })
