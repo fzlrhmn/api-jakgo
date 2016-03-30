@@ -56,8 +56,8 @@ class KesehatanRskController extends Controller
                 ->transformWith(function($rsk) {
                     return [
                         'id' => (int) $rsk->id,
-                        'nama_Rsk' => $rsk->nama,
-                        'jenis_Rsk' => $rsk->jenis,
+                        'nama_rsk' => $rsk->nama,
+                        'jenis_rsk' => $rsk->jenis,
                         'location' =>[
                             'alamat' => $rsk->alamat,
                             'latitude' => $rsk->latitude,
@@ -142,8 +142,8 @@ class KesehatanRskController extends Controller
                     }else{
                         return [
                             'id' => (int) $rsk->id,
-                            'nama_Rsk' => $rsk->nama,
-                            'jenis_Rsk' => $rsk->jenis,
+                            'nama_rsk' => $rsk->nama,
+                            'jenis_rsk' => $rsk->jenis,
                             'location' =>[
                                 'alamat' => $rsk->alamat,
                                 'latitude' => $rsk->latitude,
