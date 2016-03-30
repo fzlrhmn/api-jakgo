@@ -59,8 +59,8 @@ class PuskesmasController extends Controller
                         'nama_Puskesmas' => $puskesmas->nama,
                         'location' =>[
                             'alamat' => $puskesmas->alamat,
-                            'latitude' => $puskesmas->latitude,
-                            'longitude' => $puskesmas->longitude,
+                            'latitude' => (float) $puskesmas->latitude,
+                            'longitude' => (float) $puskesmas->longitude,
                         ],
                         'telepon' => explode(', ', $puskesmas->no_telp),
                         'faximile' => explode(', ', $puskesmas->no_fax),
@@ -121,8 +121,8 @@ class PuskesmasController extends Controller
                             'nama_Puskesmas' => $puskesmas->nama,
                             'location' =>[
                                 'alamat' => $puskesmas->alamat,
-                                'latitude' => $puskesmas->latitude,
-                                'longitude' => $puskesmas->longitude,
+                                'latitude' => (float) $puskesmas->latitude,
+                                'longitude' => (float) $puskesmas->longitude,
                             ],
                             'telepon' => explode(', ', $puskesmas->no_telp),
                             'faximile' => explode(', ', $puskesmas->no_fax),
@@ -139,8 +139,8 @@ class PuskesmasController extends Controller
                             'nama_Puskesmas' => $puskesmas->nama,
                             'location' =>[
                                 'alamat' => $puskesmas->alamat,
-                                'latitude' => $puskesmas->latitude,
-                                'longitude' => $puskesmas->longitude,
+                                'latitude' => (float) $puskesmas->latitude,
+                                'longitude' => (float) $puskesmas->longitude,
                             ],
                             'telepon' => explode(', ', $puskesmas->no_telp),
                             'faximile' => explode(', ', $puskesmas->no_fax),
