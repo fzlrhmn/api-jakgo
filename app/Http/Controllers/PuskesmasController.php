@@ -57,7 +57,11 @@ class PuskesmasController extends Controller
                     return [
                         'id' => (int) $puskesmas->id,
                         'nama_Puskesmas' => $puskesmas->nama,
-                        'alamat' => $puskesmas->alamat,
+                        'location' =>[
+                            'alamat' => $puskesmas->alamat,
+                            'latitude' => $puskesmas->latitude,
+                            'longitude' => $puskesmas->longitude,
+                        ],
                         'telepon' => explode(', ', $puskesmas->no_telp),
                         'faximile' => explode(', ', $puskesmas->no_fax),
                         'email' => $puskesmas->email,
@@ -115,7 +119,11 @@ class PuskesmasController extends Controller
                         return [
                             'id' => (int) $puskesmas->id,
                             'nama_Puskesmas' => $puskesmas->nama,
-                            'alamat' => $puskesmas->alamat,
+                            'location' =>[
+                                'alamat' => $puskesmas->alamat,
+                                'latitude' => $puskesmas->latitude,
+                                'longitude' => $puskesmas->longitude,
+                            ],
                             'telepon' => explode(', ', $puskesmas->no_telp),
                             'faximile' => explode(', ', $puskesmas->no_fax),
                             'email' => $puskesmas->email,
@@ -129,7 +137,11 @@ class PuskesmasController extends Controller
                         return [
                             'id' => (int) $puskesmas->id,
                             'nama_Puskesmas' => $puskesmas->nama,
-                            'alamat' => $puskesmas->alamat,
+                            'location' =>[
+                                'alamat' => $puskesmas->alamat,
+                                'latitude' => $puskesmas->latitude,
+                                'longitude' => $puskesmas->longitude,
+                            ],
                             'telepon' => explode(', ', $puskesmas->no_telp),
                             'faximile' => explode(', ', $puskesmas->no_fax),
                             'email' => $puskesmas->email,
