@@ -119,4 +119,14 @@ Route::group(
      * GET Museum $id
      */
     Route::get('/museum/{id}', 'PariwisataMuseumController@getMuseumById');
+
+    /**
+     * GET Rumah Sakit Umum
+     */
+    Route::get('/rumahsakitumum', 'KesehatanRsuController@getRsu');
+
+    /**
+     * GET Rumah Sakit Umum
+     */
+    Route::get('/rumahsakitumum/{id}', 'KesehatanRsuController@getRsuById');
 });
