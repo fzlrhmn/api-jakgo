@@ -129,4 +129,14 @@ Route::group(
      * GET Rumah Sakit Umum
      */
     Route::get('/rumahsakitumum/{id}', 'KesehatanRsuController@getRsuById');
+
+    /**
+     * GET Rumah Sakit Khusus
+     */
+    Route::get('/rumahsakitkhusus', 'KesehatanRskController@getRsk');
+
+    /**
+     * GET Rumah Sakit Khusus
+     */
+    Route::get('/rumahsakitkhusus/{id}', 'KesehatanRskController@getRskById');
 });
