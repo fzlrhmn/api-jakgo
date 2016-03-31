@@ -26,8 +26,7 @@ Route::get('/', function () {
 |
 */
 
-Route::group(
-    ['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']], function () {
+Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']], function () {
     Auth::guard('api')->user();
 
     /**
@@ -143,10 +142,10 @@ Route::group(
     /**
      * GET Puskesmas
      */
-    Route::get('/puskesmas', 'PuskesmasController@getPuskesmas');
+    Route::get('/puskesmas', 'KesehatanPuskesmasController@getPuskesmas');
 
     /**
      * GET Puskesmas
      */
-    Route::get('/puskesmas/{id}', 'PuskesmasController@getPuskesmasById');
+    Route::get('/puskesmas/{id}', 'KesehatanPuskesmasController@getPuskesmasById');
 });
