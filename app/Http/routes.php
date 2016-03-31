@@ -61,11 +61,6 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']
     Route::get('/cctv/bitek', 'ApiCctvBitekController@getCctvBitek');
 
     /**
-     *
-     */
-    Route::get('/rutebusway', 'RuteBuswayController@getRuteBusway');
-
-    /**
      * -------------- STABLE ---------------
      */
 
@@ -125,7 +120,7 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']
     Route::get('/rumahsakitumum', 'KesehatanRsuController@getRsu');
 
     /**
-     * GET Rumah Sakit Umum
+     * GET Rumah Sakit Umum $id
      */
     Route::get('/rumahsakitumum/{id}', 'KesehatanRsuController@getRsuById');
 
@@ -135,7 +130,7 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']
     Route::get('/rumahsakitkhusus', 'KesehatanRskController@getRsk');
 
     /**
-     * GET Rumah Sakit Khusus
+     * GET Rumah Sakit Khusus $id
      */
     Route::get('/rumahsakitkhusus/{id}', 'KesehatanRskController@getRskById');
 
@@ -145,7 +140,17 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']
     Route::get('/puskesmas', 'KesehatanPuskesmasController@getPuskesmas');
 
     /**
-     * GET Puskesmas
+     * GET Puskesmas $id
      */
     Route::get('/puskesmas/{id}', 'KesehatanPuskesmasController@getPuskesmasById');
+
+    /**
+     * GET rutebusway
+     */
+    Route::get('/rutebusway', 'TransportasiRuteBusway@getRuteBusway');
+
+    /**
+     * GET rutebusway $id
+     */
+    Route::get('/rutebusway/{id}', 'TransportasiRuteBusway@getRuteBuswayById');
 });
