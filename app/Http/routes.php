@@ -157,5 +157,10 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']
     /**
      * GET haltebusway
      */
-    Route::get('/haltebusway', 'TransportasiHalteBusway@getHalteBusway');
+    //Route::get('/haltebusway', 'TransportasiHalteBusway@getHalteBusway');
+
+    /**
+     * GET TPS
+     */
+    Route::get('/kebersihantps', 'KebersihanTps@getTps');
 });
