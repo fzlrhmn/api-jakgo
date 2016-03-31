@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 
-class PuskesmasController extends Controller
+class KesehatanPuskesmasController extends Controller
 {
     /**
      * @return array|\Illuminate\Http\JsonResponse|null
