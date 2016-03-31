@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Input;
 use League\Fractal\Pagination;
 use League\Fractal\Pagination\IlluminatePaginatorAdapter;
 
-class MusrenbangController extends Controller
+class PrototypeMusrenbangController extends Controller
 {
     /**
      * Get Musrenbang data with pagination
