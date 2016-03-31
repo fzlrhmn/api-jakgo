@@ -36,7 +36,7 @@ class KebersihanTps extends Controller
         $resultTps = DB::table('kebersihan_tps')
             ->select($this->getColumns())
             ->where('deleted', 0)
-            ->whereIn('kode_Tps',explode(",",$id))
+            ->whereIn('id',explode(",",$id))
             ->get();
 
         # return with generateResult() function
@@ -172,14 +172,16 @@ class KebersihanTps extends Controller
                 ->collection($resultTps)
                 ->transformWith(function($tps) {
                     return [
+                        'id' => (int) $tps->id,
+                        'nama_tps' => $tps->nama_tps,
                         'kode_kota' => (int) $tps->kode_kota,
-                        'nama_kota' => $tps->nama_kota,
-                        'kode_kecamatan' => (int) $tps->kode_kecamatan,
-                        'nama_kecamatan' => $tps->nama_kecamatan,
+                        'kode_kecamatan' => $tps->kode_kecamatan,
                         'kode_kelurahan' => (int) $tps->kode_kelurahan,
-                        'nama_kelurahan' => $tps->nama_kelurahan,
-                        'kode_Tps' => (int) $tps->kode_Tps,
-                        'nama_Tps' => $tps->nama_Tps,
+                        'location' => [
+                            'alamat' => (int) $tps->nama_jalan,
+                            'latitude' => (int) $tps->latitude,
+                            'longitude' => (int) $tps->longitude,
+                        ],
                         'shape' => $tps->geometry,
                     ];
                 })
@@ -215,26 +217,30 @@ class KebersihanTps extends Controller
                 ->transformWith(function($tps) {
                     if ( \Request::has('shape') && \Request::input('shape') == true ) {
                         return [
+                            'id' => (int) $tps->id,
+                            'nama_tps' => $tps->nama_tps,
                             'kode_kota' => (int) $tps->kode_kota,
-                            'nama_kota' => $tps->nama_kota,
-                            'kode_kecamatan' => (int) $tps->kode_kecamatan,
-                            'nama_kecamatan' => $tps->nama_kecamatan,
+                            'kode_kecamatan' => $tps->kode_kecamatan,
                             'kode_kelurahan' => (int) $tps->kode_kelurahan,
-                            'nama_kelurahan' => $tps->nama_kelurahan,
-                            'kode_Tps' => (int) $tps->kode_Tps,
-                            'nama_Tps' => $tps->nama_Tps,
+                            'location' => [
+                                'alamat' => (int) $tps->nama_jalan,
+                                'latitude' => (int) $tps->latitude,
+                                'longitude' => (int) $tps->longitude,
+                            ],
                             'geometry' => $tps->geometry_text,
                         ];
                     }else{
                         return [
+                            'id' => (int) $tps->id,
+                            'nama_tps' => $tps->nama_tps,
                             'kode_kota' => (int) $tps->kode_kota,
-                            'nama_kota' => $tps->nama_kota,
-                            'kode_kecamatan' => (int) $tps->kode_kecamatan,
-                            'nama_kecamatan' => $tps->nama_kecamatan,
+                            'kode_kecamatan' => $tps->kode_kecamatan,
                             'kode_kelurahan' => (int) $tps->kode_kelurahan,
-                            'nama_kelurahan' => $tps->nama_kelurahan,
-                            'kode_Tps' => (int) $tps->kode_Tps,
-                            'nama_Tps' => $tps->nama_Tps,
+                            'location' => [
+                                'alamat' => (int) $tps->nama_jalan,
+                                'latitude' => (int) $tps->latitude,
+                                'longitude' => (int) $tps->longitude,
+                            ],
                         ];
                     }
                 })

@@ -162,5 +162,10 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']
     /**
      * GET TPS
      */
-    Route::get('/kebersihantps', 'KebersihanTps@getTps');
+    Route::get('/tps', 'KebersihanTps@getTps');
+
+    /**
+     * GET TPS {id}
+     */
+    Route::get('/tps/{id}', 'KebersihanTps@getTpsById');
 });
