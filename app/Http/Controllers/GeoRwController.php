@@ -58,17 +58,17 @@ class GeoRwController extends Controller
             # transform array
             $transform = fractal()
                 ->collection($resultRw)
-                ->transformWith(function($kota) {
+                ->transformWith(function($rw) {
                     return [
-                        'kode_kota' => (int) $kota->kode_kota,
-                        'nama_kota' => $kota->nama_kota,
-                        'kode_kecamatan' => (int) $kota->kode_kecamatan,
-                        'nama_kecamatan' => $kota->nama_kecamatan,
-                        'kode_kelurahan' => (int) $kota->kode_kelurahan,
-                        'nama_kelurahan' => $kota->nama_kelurahan,
-                        'kode_rw' => (int) $kota->kode_rw,
-                        'nama_rw' => $kota->nama_rw,
-                        'shape' => $kota->geometry,
+                        'kode_kota' => (int) $rw->kode_kota,
+                        'nama_kota' => $rw->nama_kota,
+                        'kode_kecamatan' => (int) $rw->kode_kecamatan,
+                        'nama_kecamatan' => $rw->nama_kecamatan,
+                        'kode_kelurahan' => (int) $rw->kode_kelurahan,
+                        'nama_kelurahan' => $rw->nama_kelurahan,
+                        'kode_rw' => (int) $rw->kode_rw,
+                        'nama_rw' => $rw->nama_rw,
+                        'shape' => $rw->geometry,
                     ];
                 })
                 ->paginateWith(new IlluminatePaginatorAdapter($resultRw))
@@ -115,29 +115,29 @@ class GeoRwController extends Controller
             # transform array
             $transform = fractal()
                 ->collection($resultRw)
-                ->transformWith(function($kota) {
+                ->transformWith(function($rw) {
                     if ( \Request::has('shape') && \Request::input('shape') == true ) {
                         return [
-                            'kode_kota' => (int) $kota->kode_kota,
-                            'nama_kota' => $kota->nama_kota,
-                            'kode_kecamatan' => (int) $kota->kode_kecamatan,
-                            'nama_kecamatan' => $kota->nama_kecamatan,
-                            'kode_kelurahan' => (int) $kota->kode_kelurahan,
-                            'nama_kelurahan' => $kota->nama_kelurahan,
-                            'kode_rw' => (int) $kota->kode_rw,
-                            'nama_rw' => $kota->nama_rw,
-                            'geometry' => $kota->geometry_text,
+                            'kode_kota' => (int) $rw->kode_kota,
+                            'nama_kota' => $rw->nama_kota,
+                            'kode_kecamatan' => (int) $rw->kode_kecamatan,
+                            'nama_kecamatan' => $rw->nama_kecamatan,
+                            'kode_kelurahan' => (int) $rw->kode_kelurahan,
+                            'nama_kelurahan' => $rw->nama_kelurahan,
+                            'kode_rw' => (int) $rw->kode_rw,
+                            'nama_rw' => $rw->nama_rw,
+                            'geometry' => $rw->geometry_text,
                         ];
                     }else{
                         return [
-                            'kode_kota' => (int) $kota->kode_kota,
-                            'nama_kota' => $kota->nama_kota,
-                            'kode_kecamatan' => (int) $kota->kode_kecamatan,
-                            'nama_kecamatan' => $kota->nama_kecamatan,
-                            'kode_kelurahan' => (int) $kota->kode_kelurahan,
-                            'nama_kelurahan' => $kota->nama_kelurahan,
-                            'kode_rw' => (int) $kota->kode_rw,
-                            'nama_rw' => $kota->nama_rw,
+                            'kode_kota' => (int) $rw->kode_kota,
+                            'nama_kota' => $rw->nama_kota,
+                            'kode_kecamatan' => (int) $rw->kode_kecamatan,
+                            'nama_kecamatan' => $rw->nama_kecamatan,
+                            'kode_kelurahan' => (int) $rw->kode_kelurahan,
+                            'nama_kelurahan' => $rw->nama_kelurahan,
+                            'kode_rw' => (int) $rw->kode_rw,
+                            'nama_rw' => $rw->nama_rw,
                         ];
                     }
                 })
@@ -164,17 +164,17 @@ class GeoRwController extends Controller
 
             $transform = fractal()
                 ->collection($resultRw)
-                ->transformWith(function($kota) {
+                ->transformWith(function($rw) {
                     return [
-                        'kode_kota' => (int) $kota->kode_kota,
-                        'nama_kota' => $kota->nama_kota,
-                        'kode_kecamatan' => (int) $kota->kode_kecamatan,
-                        'nama_kecamatan' => $kota->nama_kecamatan,
-                        'kode_kelurahan' => (int) $kota->kode_kelurahan,
-                        'nama_kelurahan' => $kota->nama_kelurahan,
-                        'kode_rw' => (int) $kota->kode_rw,
-                        'nama_rw' => $kota->nama_rw,
-                        'shape' => $kota->geometry,
+                        'kode_kota' => (int) $rw->kode_kota,
+                        'nama_kota' => $rw->nama_kota,
+                        'kode_kecamatan' => (int) $rw->kode_kecamatan,
+                        'nama_kecamatan' => $rw->nama_kecamatan,
+                        'kode_kelurahan' => (int) $rw->kode_kelurahan,
+                        'nama_kelurahan' => $rw->nama_kelurahan,
+                        'kode_rw' => (int) $rw->kode_rw,
+                        'nama_rw' => $rw->nama_rw,
+                        'shape' => $rw->geometry,
                     ];
                 })
                 ->toArray();
@@ -206,29 +206,29 @@ class GeoRwController extends Controller
 
             $transform = fractal()
                 ->collection($resultRw)
-                ->transformWith(function($kota) {
+                ->transformWith(function($rw) {
                     if ( \Request::has('shape') && \Request::input('shape') == true ) {
                         return [
-                            'kode_kota' => (int) $kota->kode_kota,
-                            'nama_kota' => $kota->nama_kota,
-                            'kode_kecamatan' => (int) $kota->kode_kecamatan,
-                            'nama_kecamatan' => $kota->nama_kecamatan,
-                            'kode_kelurahan' => (int) $kota->kode_kelurahan,
-                            'nama_kelurahan' => $kota->nama_kelurahan,
-                            'kode_rw' => (int) $kota->kode_rw,
-                            'nama_rw' => $kota->nama_rw,
-                            'geometry' => $kota->geometry_text,
+                            'kode_kota' => (int) $rw->kode_kota,
+                            'nama_kota' => $rw->nama_kota,
+                            'kode_kecamatan' => (int) $rw->kode_kecamatan,
+                            'nama_kecamatan' => $rw->nama_kecamatan,
+                            'kode_kelurahan' => (int) $rw->kode_kelurahan,
+                            'nama_kelurahan' => $rw->nama_kelurahan,
+                            'kode_rw' => (int) $rw->kode_rw,
+                            'nama_rw' => $rw->nama_rw,
+                            'geometry' => $rw->geometry_text,
                         ];
                     }else{
                         return [
-                            'kode_kota' => (int) $kota->kode_kota,
-                            'nama_kota' => $kota->nama_kota,
-                            'kode_kecamatan' => (int) $kota->kode_kecamatan,
-                            'nama_kecamatan' => $kota->nama_kecamatan,
-                            'kode_kelurahan' => (int) $kota->kode_kelurahan,
-                            'nama_kelurahan' => $kota->nama_kelurahan,
-                            'kode_rw' => (int) $kota->kode_rw,
-                            'nama_rw' => $kota->nama_rw,
+                            'kode_kota' => (int) $rw->kode_kota,
+                            'nama_kota' => $rw->nama_kota,
+                            'kode_kecamatan' => (int) $rw->kode_kecamatan,
+                            'nama_kecamatan' => $rw->nama_kecamatan,
+                            'kode_kelurahan' => (int) $rw->kode_kelurahan,
+                            'nama_kelurahan' => $rw->nama_kelurahan,
+                            'kode_rw' => (int) $rw->kode_rw,
+                            'nama_rw' => $rw->nama_rw,
                         ];
                     }
                 })
