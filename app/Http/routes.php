@@ -153,4 +153,9 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']
      * GET rutebusway $id
      */
     Route::get('/rutebusway/{id}', 'TransportasiRuteBusway@getRuteBuswayById');
+
+    /**
+     * GET haltebusway
+     */
+    Route::get('/haltebusway', 'TransportasiHalteBusway@getHalteBusway');
 });
