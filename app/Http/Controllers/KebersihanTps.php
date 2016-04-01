@@ -63,7 +63,7 @@ class KebersihanTps extends Controller
                         'id' => (int) $tps->id,
                         'nama_tps' => $tps->nama_tps,
                         'kode_kota' => (int) $tps->kode_kota,
-                        'kode_kecamatan' => $tps->kode_kecamatan,
+                        'kode_kecamatan' => (int) $tps->kode_kecamatan,
                         'kode_kelurahan' => (int) $tps->kode_kelurahan,
                         'location' => [
                             'alamat' => (int) $tps->nama_jalan,
@@ -123,7 +123,7 @@ class KebersihanTps extends Controller
                             'id' => (int) $tps->id,
                             'nama_tps' => $tps->nama_tps,
                             'kode_kota' => (int) $tps->kode_kota,
-                            'kode_kecamatan' => $tps->kode_kecamatan,
+                            'kode_kecamatan' => (int) $tps->kode_kecamatan,
                             'kode_kelurahan' => (int) $tps->kode_kelurahan,
                             'location' => [
                                 'alamat' => (int) $tps->nama_jalan,
@@ -137,7 +137,7 @@ class KebersihanTps extends Controller
                             'id' => (int) $tps->id,
                             'nama_tps' => $tps->nama_tps,
                             'kode_kota' => (int) $tps->kode_kota,
-                            'kode_kecamatan' => $tps->kode_kecamatan,
+                            'kode_kecamatan' => (int) $tps->kode_kecamatan,
                             'kode_kelurahan' => (int) $tps->kode_kelurahan,
                             'location' => [
                                 'alamat' => (int) $tps->nama_jalan,
