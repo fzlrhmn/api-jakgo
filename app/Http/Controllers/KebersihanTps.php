@@ -67,8 +67,8 @@ class KebersihanTps extends Controller
                         'kode_kelurahan' => (int) $tps->kode_kelurahan,
                         'location' => [
                             'alamat' => (int) $tps->nama_jalan,
-                            'latitude' => (int) $tps->latitude,
-                            'longitude' => (int) $tps->longitude,
+                            'latitude' => (float) $tps->latitude,
+                            'longitude' => (float) $tps->longitude,
                         ],
                         'shape' => $tps->geometry,
                     ];
@@ -127,8 +127,8 @@ class KebersihanTps extends Controller
                             'kode_kelurahan' => (int) $tps->kode_kelurahan,
                             'location' => [
                                 'alamat' => (int) $tps->nama_jalan,
-                                'latitude' => (int) $tps->latitude,
-                                'longitude' => (int) $tps->longitude,
+                                'latitude' => (float) $tps->latitude,
+                                'longitude' => (float) $tps->longitude,
                             ],
                             'geometry' => $tps->geometry_text,
                         ];
@@ -141,8 +141,8 @@ class KebersihanTps extends Controller
                             'kode_kelurahan' => (int) $tps->kode_kelurahan,
                             'location' => [
                                 'alamat' => (int) $tps->nama_jalan,
-                                'latitude' => (int) $tps->latitude,
-                                'longitude' => (int) $tps->longitude,
+                                'latitude' => (float) $tps->latitude,
+                                'longitude' => (float) $tps->longitude,
                             ],
                         ];
                     }
@@ -179,8 +179,8 @@ class KebersihanTps extends Controller
                         'kode_kelurahan' => (int) $tps->kode_kelurahan,
                         'location' => [
                             'alamat' => (int) $tps->nama_jalan,
-                            'latitude' => (int) $tps->latitude,
-                            'longitude' => (int) $tps->longitude,
+                            'latitude' => (float) $tps->latitude,
+                            'longitude' => (float) $tps->longitude,
                         ],
                         'shape' => $tps->geometry,
                     ];
@@ -224,8 +224,8 @@ class KebersihanTps extends Controller
                             'kode_kelurahan' => (int) $tps->kode_kelurahan,
                             'location' => [
                                 'alamat' => (int) $tps->nama_jalan,
-                                'latitude' => (int) $tps->latitude,
-                                'longitude' => (int) $tps->longitude,
+                                'latitude' => (float) $tps->latitude,
+                                'longitude' => (float) $tps->longitude,
                             ],
                             'geometry' => $tps->geometry_text,
                         ];
@@ -238,8 +238,8 @@ class KebersihanTps extends Controller
                             'kode_kelurahan' => (int) $tps->kode_kelurahan,
                             'location' => [
                                 'alamat' => (int) $tps->nama_jalan,
-                                'latitude' => (int) $tps->latitude,
-                                'longitude' => (int) $tps->longitude,
+                                'latitude' => (float) $tps->latitude,
+                                'longitude' => (float) $tps->longitude,
                             ],
                         ];
                     }
