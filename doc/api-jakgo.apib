@@ -1,0 +1,5049 @@
+FORMAT: 1A
+HOST: http://api-jakgo.fzlrhmn.com/
+
+# API jakgo
+
+API Jakgo merupakan sebuah layanan yang menyediakan informasi data yang ada di lingkup Pemerintah Provinsi DKI Jakarta.
+Data ini mencakup semua bidang yang ada di Provinsi DKI Jakarta seperti Kesehatan, Kebersihan, Transportasi, dll.
+
+Sample Calls:
+
+**Batas Administrasi Kecamatan**
+[api-jakgo.fzlrhmn.com/api/v1/kecamatan?api_token=q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk](http://api-jakgo.fzlrhmn.com/api/v1/kecamatan?api_token=q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk)
+
+**Batas Administrasi Kelurahan**
+[api-jakgo.fzlrhmn.com/api/v1/kelurahan?api_token=q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk&shape=true](http://api-jakgo.fzlrhmn.com/api/v1/kelurahan?api_token=q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk&shape=true)
+
+## Kota [/api/v1/kota/{kode_kota}?api_token={api_token}&shape={shape}&format={format}]
+
+### Data Kota [GET]
+
++ Parameters
+    + kode_kota (required, array, `3174`) ... kode_kota of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174,3175'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Kota will include in API.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+
++ Response 200 (application/json)
+    {
+        "status": "success",
+        "count": 5,
+        "data": [
+            {
+                "kode_provinsi": 31,
+                "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+                "kode_kota": 3174,
+                "nama_kota": "Jakarta Barat"
+            },
+            {
+                "kode_provinsi": 31,
+                "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+                "kode_kota": 3173,
+                "nama_kota": "Jakarta Pusat"
+            },
+            {
+                "kode_provinsi": 31,
+                "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+                "kode_kota": 3171,
+                "nama_kota": "Jakarta Selatan"
+            },
+            {
+                "kode_provinsi": 31,
+                "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+                "kode_kota": 3172,
+                "nama_kota": "Jakarta Timur"
+            },
+            {
+                "kode_provinsi": 31,
+                "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+                "kode_kota": 3175,
+                "nama_kota": "Jakarta Utara"
+            }
+        ]
+    }
+
+## Kecamatan [/api/v1/kecamatan/{kode_kecamatan}?api_token={api_token}&shape={shape}&format={format}]
+
+### Data Kecamatan [GET]
+
++ Parameters
+    + kode_kecamatan (required, array, `3175060`) ... kode_kecamatan of the kecamatan itself, use comma without whitespace if want to get more than one data, i.e '3172040,3172050'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + shape (optional, string, `true`) ... String if true that geometry in WKT string of kecamatan will include in API.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+
++ Response 200 (application/json)
+
+        {
+          "status": "success",
+          "count": 42,
+          "data": [
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172040,
+              "nama_kecamatan": "Makasar"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171010,
+              "nama_kecamatan": "Jagakarsa"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172010,
+              "nama_kecamatan": "Pasar Rebo"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172020,
+              "nama_kecamatan": "Ciracas"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172030,
+              "nama_kecamatan": "Cipayung"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171030,
+              "nama_kecamatan": "Cilandak"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171020,
+              "nama_kecamatan": "Pasar Minggu"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171060,
+              "nama_kecamatan": "Kebayoran Baru"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172050,
+              "nama_kecamatan": "Kramat Jati"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171050,
+              "nama_kecamatan": "Kebayoran Lama"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171080,
+              "nama_kecamatan": "Pancoran"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3173,
+              "nama_kota": "Jakarta Pusat",
+              "kode_kecamatan": 3173010,
+              "nama_kecamatan": "Tanah Abang"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171070,
+              "nama_kecamatan": "Mampang Prapatan"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171040,
+              "nama_kecamatan": "Pesanggrahan"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172070,
+              "nama_kecamatan": "Duren Sawit"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172060,
+              "nama_kecamatan": "Jatinegara"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171090,
+              "nama_kecamatan": "Tebet"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3171,
+              "nama_kota": "Jakarta Selatan",
+              "kode_kecamatan": 3171100,
+              "nama_kecamatan": "Setiabudi"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172100,
+              "nama_kecamatan": "Matraman"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3173,
+              "nama_kota": "Jakarta Pusat",
+              "kode_kecamatan": 3173020,
+              "nama_kecamatan": "Menteng"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3173,
+              "nama_kota": "Jakarta Pusat",
+              "kode_kecamatan": 3173040,
+              "nama_kecamatan": "Johar Baru"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3174,
+              "nama_kota": "Jakarta Barat",
+              "kode_kecamatan": 3174030,
+              "nama_kecamatan": "Palmerah"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3173,
+              "nama_kota": "Jakarta Pusat",
+              "kode_kecamatan": 3173030,
+              "nama_kecamatan": "Senen"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172090,
+              "nama_kecamatan": "Pulo Gadung"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3173,
+              "nama_kota": "Jakarta Pusat",
+              "kode_kecamatan": 3173050,
+              "nama_kecamatan": "Cempaka Putih"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3173,
+              "nama_kota": "Jakarta Pusat",
+              "kode_kecamatan": 3173080,
+              "nama_kecamatan": "Gambir"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3174,
+              "nama_kota": "Jakarta Barat",
+              "kode_kecamatan": 3174020,
+              "nama_kecamatan": "Kebon Jeruk"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3174,
+              "nama_kota": "Jakarta Barat",
+              "kode_kecamatan": 3174010,
+              "nama_kecamatan": "Kembangan"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3172,
+              "nama_kota": "Jakarta Timur",
+              "kode_kecamatan": 3172080,
+              "nama_kecamatan": "Cakung"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3173,
+              "nama_kota": "Jakarta Pusat",
+              "kode_kecamatan": 3173060,
+              "nama_kecamatan": "Kemayoran"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3174,
+              "nama_kota": "Jakarta Barat",
+              "kode_kecamatan": 3174040,
+              "nama_kecamatan": "Grogol Petamburan"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3175,
+              "nama_kota": "Jakarta Utara",
+              "kode_kecamatan": 3175050,
+              "nama_kecamatan": "Kelapa Gading"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3173,
+              "nama_kota": "Jakarta Pusat",
+              "kode_kecamatan": 3173070,
+              "nama_kecamatan": "Sawah Besar"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3174,
+              "nama_kota": "Jakarta Barat",
+              "kode_kecamatan": 3174050,
+              "nama_kecamatan": "Tambora"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3174,
+              "nama_kota": "Jakarta Barat",
+              "kode_kecamatan": 3174060,
+              "nama_kecamatan": "Taman Sari"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3174,
+              "nama_kota": "Jakarta Barat",
+              "kode_kecamatan": 3174070,
+              "nama_kecamatan": "Cengkareng"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3175,
+              "nama_kota": "Jakarta Utara",
+              "kode_kecamatan": 3175020,
+              "nama_kecamatan": "Pademangan"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3175,
+              "nama_kota": "Jakarta Utara",
+              "kode_kecamatan": 3175040,
+              "nama_kecamatan": "Koja"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3174,
+              "nama_kota": "Jakarta Barat",
+              "kode_kecamatan": 3174080,
+              "nama_kecamatan": "Kalideres"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3175,
+              "nama_kota": "Jakarta Utara",
+              "kode_kecamatan": 3175030,
+              "nama_kecamatan": "Tanjung Priok"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3175,
+              "nama_kota": "Jakarta Utara",
+              "kode_kecamatan": 3175010,
+              "nama_kecamatan": "Penjaringan"
+            },
+            {
+              "kode_provinsi": 31,
+              "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+              "kode_kota": 3175,
+              "nama_kota": "Jakarta Utara",
+              "kode_kecamatan": 3175060,
+              "nama_kecamatan": "Cilincing"
+            }
+          ]
+        }
+        
+## Kelurahan [/api/v1/kelurahan/{kode_kelurahan}?api_token={api_token}&shape={shape}&format={format}]
+
+### Data Kelurahan [GET]
+
++ Parameters
+    + kode_kelurahan (required, array, `3174020007`) ... kode_kelurahan of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174020007,3174020006'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Kelurahan will include in API.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+    
++ Response 200 (application/json)
+    {
+        "status": "success",
+        "count": 377,
+        "data": [
+            {
+                "kode_provinsi": 31,
+                "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+                "kode_kota": 3171,
+                "nama_kota": "Jakarta Selatan",
+                "kode_kecamatan": 3171010,
+                "nama_kecamatan": "Jagakarsa",
+                "kode_kelurahan": 3171010001,
+                "nama_kelurahan": "Cipedak"
+            },
+            {
+                "kode_provinsi": 31,
+                "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+                "kode_kota": 3101,
+                "nama_kota": "KEPULAUAN SERIBU",
+                "kode_kecamatan": 3101010,
+                "nama_kecamatan": "KEPULAUAN SERIBU SELATAN",
+                "kode_kelurahan": 3101010003,
+                "nama_kelurahan": "PULAU UNTUNG JAWA"
+            },
+            {
+                "kode_provinsi": 31,
+                "nama_provinsi": "DAERAH KHUSUS IBUKOTA JAKARTA",
+                "kode_kota": 3101,
+                "nama_kota": "KEPULAUAN SERIBU",
+                "kode_kecamatan": 3101010,
+                "nama_kecamatan": "KEPULAUAN SERIBU SELATAN",
+                "kode_kelurahan": 3101010003,
+                "nama_kelurahan": "PULAU UNTUNG JAWA"
+            }
+        ]
+    }
+
+## RW [/api/v1/rw/{kode_rw}?api_token={api_token}&shape={shape}&format={format}&page={page}]
+
+### Data RW [GET]
+
++ Parameters
+    + kode_rw (required, array, `3174070005001000`) ... kode_rw of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174070005001000,3174070005002000'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + shape (optional, string, `true`) ... String if true that geometry in WKT string of RW will include in API.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+    + page (required, string, `1`) ... Number of page that show. This API show 200 RW per call.
+
++ Response 200 (application/json)
+        {
+            "data": [
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005011000,
+                  "nama_rw": "RW 11"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005012000,
+                  "nama_rw": "RW 12"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005013000,
+                  "nama_rw": "RW 13"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005014000,
+                  "nama_rw": "RW 14"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005015000,
+                  "nama_rw": "RW 15"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005016000,
+                  "nama_rw": "RW 16"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174070,
+                  "nama_kecamatan": "CENGKARENG",
+                  "kode_kelurahan": 3174070005,
+                  "nama_kelurahan": "CENGKARENG TIMUR",
+                  "kode_rw": 3174070005017000,
+                  "nama_rw": "RW 17"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040004,
+                  "nama_kelurahan": "GROGOL",
+                  "kode_rw": 3174040004010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005011000,
+                  "nama_rw": "RW 011"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040005,
+                  "nama_kelurahan": "JELAMBAR",
+                  "kode_rw": 3174040005010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007011000,
+                  "nama_rw": "RW 11"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040007,
+                  "nama_kelurahan": "JELAMBAR BARU",
+                  "kode_rw": 3174040007012000,
+                  "nama_rw": "RW 12"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040002,
+                  "nama_kelurahan": "TANJUNG DUREN SELATAN",
+                  "kode_rw": 3174040002001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040002,
+                  "nama_kelurahan": "TANJUNG DUREN SELATAN",
+                  "kode_rw": 3174040002002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040002,
+                  "nama_kelurahan": "TANJUNG DUREN SELATAN",
+                  "kode_rw": 3174040002003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040002,
+                  "nama_kelurahan": "TANJUNG DUREN SELATAN",
+                  "kode_rw": 3174040002004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040002,
+                  "nama_kelurahan": "TANJUNG DUREN SELATAN",
+                  "kode_rw": 3174040002005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040002,
+                  "nama_kelurahan": "TANJUNG DUREN SELATAN",
+                  "kode_rw": 3174040002006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040002,
+                  "nama_kelurahan": "TANJUNG DUREN SELATAN",
+                  "kode_rw": 3174040002007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040001,
+                  "nama_kelurahan": "TANJUNG DUREN UTARA",
+                  "kode_rw": 3174040001001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040001,
+                  "nama_kelurahan": "TANJUNG DUREN UTARA",
+                  "kode_rw": 3174040001002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040001,
+                  "nama_kelurahan": "TANJUNG DUREN UTARA",
+                  "kode_rw": 3174040001003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040001,
+                  "nama_kelurahan": "TANJUNG DUREN UTARA",
+                  "kode_rw": 3174040001004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040001,
+                  "nama_kelurahan": "TANJUNG DUREN UTARA",
+                  "kode_rw": 3174040001005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040001,
+                  "nama_kelurahan": "TANJUNG DUREN UTARA",
+                  "kode_rw": 3174040001006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040001,
+                  "nama_kelurahan": "TANJUNG DUREN UTARA",
+                  "kode_rw": 3174040001007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003016000,
+                  "nama_rw": "RW 016"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003011000,
+                  "nama_rw": "RW 11"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003012000,
+                  "nama_rw": "RW 12"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003013000,
+                  "nama_rw": "RW 13"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003014000,
+                  "nama_rw": "RW 14"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040003,
+                  "nama_kelurahan": "TOMANG",
+                  "kode_rw": 3174040003015000,
+                  "nama_rw": "RW 15"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174040,
+                  "nama_kecamatan": "GROGOL PETAMBURAN",
+                  "kode_kelurahan": 3174040006,
+                  "nama_kelurahan": "WIJAYA KESUMA",
+                  "kode_rw": 3174040006010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002011000,
+                  "nama_rw": "RW 11"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002012000,
+                  "nama_rw": "RW 12"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002013000,
+                  "nama_rw": "RW 13"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002014000,
+                  "nama_rw": "RW 14"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002015000,
+                  "nama_rw": "RW 15"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002016000,
+                  "nama_rw": "RW 16"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080002,
+                  "nama_kelurahan": "KALIDERES",
+                  "kode_rw": 3174080002017000,
+                  "nama_rw": "RW 17"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080005,
+                  "nama_kelurahan": "KAMAL",
+                  "kode_rw": 3174080005010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003011000,
+                  "nama_rw": "RW 11"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003012000,
+                  "nama_rw": "RW 12"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003013000,
+                  "nama_rw": "RW 13"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003014000,
+                  "nama_rw": "RW 14"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003015000,
+                  "nama_rw": "RW 15"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003016000,
+                  "nama_rw": "RW 16"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003017000,
+                  "nama_rw": "RW 17"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003018000,
+                  "nama_rw": "RW 18"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080003,
+                  "nama_kelurahan": "PEGADUNGAN",
+                  "kode_rw": 3174080003019000,
+                  "nama_rw": "RW 19"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001011000,
+                  "nama_rw": "RW 11"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174080,
+                  "nama_kecamatan": "KALI DERES",
+                  "kode_kelurahan": 3174080001,
+                  "nama_kelurahan": "SEMANAN",
+                  "kode_rw": 3174080001012000,
+                  "nama_rw": "RW 12"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005011000,
+                  "nama_rw": "RW 11"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005012000,
+                  "nama_rw": "RW 12"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005013000,
+                  "nama_rw": "RW 13"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020005,
+                  "nama_kelurahan": "DURI KEPA",
+                  "kode_rw": 3174020005014000,
+                  "nama_rw": "RW 14"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004009000,
+                  "nama_rw": "RW 09"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004010000,
+                  "nama_rw": "RW 10"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004011000,
+                  "nama_rw": "RW 11"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004012000,
+                  "nama_rw": "RW 12"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020004,
+                  "nama_kelurahan": "KEBON JERUK",
+                  "kode_rw": 3174020004013000,
+                  "nama_rw": "RW 13"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020006,
+                  "nama_kelurahan": "KEDOYA SELATAN",
+                  "kode_rw": 3174020006001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020006,
+                  "nama_kelurahan": "KEDOYA SELATAN",
+                  "kode_rw": 3174020006002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020006,
+                  "nama_kelurahan": "KEDOYA SELATAN",
+                  "kode_rw": 3174020006003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020006,
+                  "nama_kelurahan": "KEDOYA SELATAN",
+                  "kode_rw": 3174020006004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020006,
+                  "nama_kelurahan": "KEDOYA SELATAN",
+                  "kode_rw": 3174020006005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020003,
+                  "nama_kelurahan": "KELAPA DUA",
+                  "kode_rw": 3174020003001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020003,
+                  "nama_kelurahan": "KELAPA DUA",
+                  "kode_rw": 3174020003002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020003,
+                  "nama_kelurahan": "KELAPA DUA",
+                  "kode_rw": 3174020003003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020003,
+                  "nama_kelurahan": "KELAPA DUA",
+                  "kode_rw": 3174020003004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020003,
+                  "nama_kelurahan": "KELAPA DUA",
+                  "kode_rw": 3174020003005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020003,
+                  "nama_kelurahan": "KELAPA DUA",
+                  "kode_rw": 3174020003006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020003,
+                  "nama_kelurahan": "KELAPA DUA",
+                  "kode_rw": 3174020003007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020003,
+                  "nama_kelurahan": "KELAPA DUA",
+                  "kode_rw": 3174020003008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020001,
+                  "nama_kelurahan": "SUKABUMI SELATAN",
+                  "kode_rw": 3174020001001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020001,
+                  "nama_kelurahan": "SUKABUMI SELATAN",
+                  "kode_rw": 3174020001002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020001,
+                  "nama_kelurahan": "SUKABUMI SELATAN",
+                  "kode_rw": 3174020001003000,
+                  "nama_rw": "RW 03"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020001,
+                  "nama_kelurahan": "SUKABUMI SELATAN",
+                  "kode_rw": 3174020001004000,
+                  "nama_rw": "RW 04"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020001,
+                  "nama_kelurahan": "SUKABUMI SELATAN",
+                  "kode_rw": 3174020001005000,
+                  "nama_rw": "RW 05"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020001,
+                  "nama_kelurahan": "SUKABUMI SELATAN",
+                  "kode_rw": 3174020001006000,
+                  "nama_rw": "RW 06"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020001,
+                  "nama_kelurahan": "SUKABUMI SELATAN",
+                  "kode_rw": 3174020001007000,
+                  "nama_rw": "RW 07"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020001,
+                  "nama_kelurahan": "SUKABUMI SELATAN",
+                  "kode_rw": 3174020001008000,
+                  "nama_rw": "RW 08"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020002,
+                  "nama_kelurahan": "SUKABUMI UTARA",
+                  "kode_rw": 3174020002001000,
+                  "nama_rw": "RW 01"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020002,
+                  "nama_kelurahan": "SUKABUMI UTARA",
+                  "kode_rw": 3174020002002000,
+                  "nama_rw": "RW 02"
+                },
+                {
+                  "kode_kota": 3174,
+                  "nama_kota": "JAKARTA BARAT",
+                  "kode_kecamatan": 3174020,
+                  "nama_kecamatan": "KEBON JERUK",
+                  "kode_kelurahan": 3174020002,
+                  "nama_kelurahan": "SUKABUMI UTARA",
+                  "kode_rw": 3174020002003000,
+                  "nama_rw": "RW 03"
+                }
+            ],
+                "meta": {
+                    "pagination": {
+                        "total": 2732,
+                        "count": 200,
+                        "per_page": 200,
+                        "current_page": 1,
+                        "total_pages": 14,
+                        "links": {
+                            "next": "http://api-jakgo.fzlrhmn.com/api/v1/rw?page=2"
+                        }
+                }
+            }
+        }
+
+## TPS [/api/v1/tps/{id}?api_token={api_token}&shape={shape}&format={format}&page={page}]
+
+### Data TPS [GET]
+
++ Parameters
+    + id (required, array, `1`) ... id of the TPS itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + shape (optional, string, `true`) ... String if true that geometry in WKT string of TPS will include in API.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+    + page (required, string, `1`) ... Number of page that show. This API show 200 RW per call.
+
++ Response 200 (application/json)
+    {
+        "data": [
+            {
+              "id": 1,
+              "nama_tps": "TPS Albo RW 08",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.168268025,
+                "longitude": 106.934259972
+              }
+            },
+            {
+              "id": 2,
+              "nama_tps": "TPS Bak Pos 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2173480069999,
+                "longitude": 106.95303401
+              }
+            },
+            {
+              "id": 3,
+              "nama_tps": "TPS Bak Pos 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2184249979999,
+                "longitude": 106.953151021
+              }
+            },
+            {
+              "id": 4,
+              "nama_tps": "TPS Bak Smp 172",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.218077987,
+                "longitude": 106.951124026
+              }
+            },
+            {
+              "id": 5,
+              "nama_tps": "TPS Dipo Aneka Elok",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.193695031,
+                "longitude": 106.941415016
+              }
+            },
+            {
+              "id": 6,
+              "nama_tps": "TPS Dipo Permai",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1938599869999,
+                "longitude": 106.94523599
+              }
+            },
+            {
+              "id": 7,
+              "nama_tps": "TPS Dipo PIK 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2062190189999,
+                "longitude": 106.928045964
+              }
+            },
+            {
+              "id": 8,
+              "nama_tps": "TPS Dipo PIK 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.202783026,
+                "longitude": 106.92807002
+              }
+            },
+            {
+              "id": 9,
+              "nama_tps": "TPS Dipo PPD 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.173798991,
+                "longitude": 106.933052978
+              }
+            },
+            {
+              "id": 10,
+              "nama_tps": "TPS Dipo Rajiman",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.211005002,
+                "longitude": 106.922937026
+              }
+            },
+            {
+              "id": 11,
+              "nama_tps": "TPS Era Mas Jln. sumarno",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2063800359999,
+                "longitude": 106.946392022
+              }
+            },
+            {
+              "id": 12,
+              "nama_tps": "TPS Gapura",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.204605,
+                "longitude": 106.90798698
+              }
+            },
+            {
+              "id": 13,
+              "nama_tps": "TPS Gg Lele",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.212127004,
+                "longitude": 106.905148029
+              }
+            },
+            {
+              "id": 14,
+              "nama_tps": "TPS Jembatan Tinggi Kolong",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.163001005,
+                "longitude": 106.933075022
+              }
+            },
+            {
+              "id": 15,
+              "nama_tps": "TPS Jln. Buaran 4",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2121320329999,
+                "longitude": 106.93463699
+              }
+            },
+            {
+              "id": 16,
+              "nama_tps": "TPS Jln. Cakung Cilincing",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1821030269999,
+                "longitude": 106.942701973
+              }
+            },
+            {
+              "id": 17,
+              "nama_tps": "TPS Jln. Harapan",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.164102973,
+                "longitude": 106.948844986
+              }
+            },
+            {
+              "id": 18,
+              "nama_tps": "TPS Jln. Inpeksi Pan 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1757430059999,
+                "longitude": 106.938237017
+              }
+            },
+            {
+              "id": 19,
+              "nama_tps": "TPS Jln. Inpeksi Pan 10",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.178644989,
+                "longitude": 106.941155009
+              }
+            },
+            {
+              "id": 20,
+              "nama_tps": "TPS Jln. Inpeksi Pan 11",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.178918993,
+                "longitude": 106.941425996
+              }
+            },
+            {
+              "id": 21,
+              "nama_tps": "TPS Jln. Inpeksi Pan 12",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1791199909999,
+                "longitude": 106.941623976
+              }
+            },
+            {
+              "id": 22,
+              "nama_tps": "TPS Jln. Inpeksi Pan 13",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.179296011,
+                "longitude": 106.941773007
+              }
+            },
+            {
+              "id": 23,
+              "nama_tps": "TPS Jln. Inpeksi Pan 14",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.179512013,
+                "longitude": 106.942011975
+              }
+            },
+            {
+              "id": 24,
+              "nama_tps": "TPS Jln. Inpeksi Pan 15",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.179717034,
+                "longitude": 106.94218196
+              }
+            },
+            {
+              "id": 25,
+              "nama_tps": "TPS Jln. Inpeksi Pan 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1759290009999,
+                "longitude": 106.938540023
+              }
+            },
+            {
+              "id": 26,
+              "nama_tps": "TPS Jln. Inpeksi Pan 3",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.176140979,
+                "longitude": 106.938793994
+              }
+            },
+            {
+              "id": 27,
+              "nama_tps": "TPS Jln. Inpeksi Pan 4",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1764549649999,
+                "longitude": 106.939051989
+              }
+            },
+            {
+              "id": 28,
+              "nama_tps": "TPS Jln. Inpeksi Pan 5",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.176772974,
+                "longitude": 106.939378968
+              }
+            },
+            {
+              "id": 29,
+              "nama_tps": "TPS Jln. Inpeksi Pan 6",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1770059909999,
+                "longitude": 106.93961299
+              }
+            },
+            {
+              "id": 30,
+              "nama_tps": "TPS Jln. Inpeksi Pan 7",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.177385021,
+                "longitude": 106.939956984
+              }
+            },
+            {
+              "id": 31,
+              "nama_tps": "TPS Jln. Inpeksi Pan 8",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1775969989999,
+                "longitude": 106.940188995
+              }
+            },
+            {
+              "id": 32,
+              "nama_tps": "TPS Jln. Inpeksi Pan 9",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1778730149999,
+                "longitude": 106.940415977
+              }
+            },
+            {
+              "id": 33,
+              "nama_tps": "TPS Jln. Irigasi 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.183561981,
+                "longitude": 106.951399036
+              }
+            },
+            {
+              "id": 34,
+              "nama_tps": "TPS Jln. Komarudin 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1899800039999,
+                "longitude": 106.942909006
+              }
+            },
+            {
+              "id": 35,
+              "nama_tps": "TPS Jln. Komarudin 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.187977986,
+                "longitude": 106.942554032
+              }
+            },
+            {
+              "id": 36,
+              "nama_tps": "TPS Jln. Komarudin 3",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.187269967,
+                "longitude": 106.942728041
+              }
+            },
+            {
+              "id": 37,
+              "nama_tps": "TPS Jln. Komarudin 4",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.186377965,
+                "longitude": 106.942723012
+              }
+            },
+            {
+              "id": 38,
+              "nama_tps": "TPS Jln. Komarudin 5",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.185733983,
+                "longitude": 106.942689987
+              }
+            },
+            {
+              "id": 39,
+              "nama_tps": "TPS Jln. Komarudin Timur",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1887590119999,
+                "longitude": 106.943619959
+              }
+            },
+            {
+              "id": 40,
+              "nama_tps": "TPS Jln. Rajiman 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2025060039999,
+                "longitude": 106.922768969
+              }
+            },
+            {
+              "id": 41,
+              "nama_tps": "TPS Jln. Rajiman 10",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1935289859999,
+                "longitude": 106.922808029
+              }
+            },
+            {
+              "id": 42,
+              "nama_tps": "TPS Jln. Rajiman 11",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1929679849999,
+                "longitude": 106.922693029
+              }
+            },
+            {
+              "id": 43,
+              "nama_tps": "TPS Jln. Rajiman 12",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.197419027,
+                "longitude": 106.922248034
+              }
+            },
+            {
+              "id": 44,
+              "nama_tps": "TPS Jln. Rajiman 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.190677965,
+                "longitude": 106.923200972
+              }
+            },
+            {
+              "id": 45,
+              "nama_tps": "TPS Jln. Rajiman 3",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.185862981,
+                "longitude": 106.923454022
+              }
+            },
+            {
+              "id": 46,
+              "nama_tps": "TPS Jln. Rajiman 4",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.187254041,
+                "longitude": 106.923207007
+              }
+            },
+            {
+              "id": 47,
+              "nama_tps": "TPS Jln. Rajiman 5",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.188789019,
+                "longitude": 106.923258975
+              }
+            },
+            {
+              "id": 48,
+              "nama_tps": "TPS Jln. Rajiman 6",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1894650199999,
+                "longitude": 106.923267022
+              }
+            },
+            {
+              "id": 49,
+              "nama_tps": "TPS Jln. Rajiman 7",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.190656004,
+                "longitude": 106.923194015
+              }
+            },
+            {
+              "id": 50,
+              "nama_tps": "TPS Jln. Rajiman 8",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.191306021,
+                "longitude": 106.92301699
+              }
+            },
+            {
+              "id": 51,
+              "nama_tps": "TPS Jln. Rajiman 9",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1918139639999,
+                "longitude": 106.922900984
+              }
+            },
+            {
+              "id": 52,
+              "nama_tps": "TPS Jln. Rawa Kepiting",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.195110986,
+                "longitude": 106.921081021
+              }
+            },
+            {
+              "id": 53,
+              "nama_tps": "TPS Jln. Rawa Terate 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1928969899999,
+                "longitude": 106.917144042
+              }
+            },
+            {
+              "id": 54,
+              "nama_tps": "TPS Jln. Rawa Terate 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.185243977,
+                "longitude": 106.912628962
+              }
+            },
+            {
+              "id": 55,
+              "nama_tps": "TPS Jln. Rawa Terate 3",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1876260299999,
+                "longitude": 106.906064004
+              }
+            },
+            {
+              "id": 56,
+              "nama_tps": "TPS Jln. Raya Bekasi",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.183685027,
+                "longitude": 106.927221017
+              }
+            },
+            {
+              "id": 57,
+              "nama_tps": "TPS Jln. Raya Penggilingan",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.189084984,
+                "longitude": 106.934510004
+              }
+            },
+            {
+              "id": 58,
+              "nama_tps": "TPS Jln. Tambun Renggas",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1631510409999,
+                "longitude": 106.961855963
+              }
+            },
+            {
+              "id": 59,
+              "nama_tps": "TPS Kandang Monyet Ujung Menteng",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1896840389999,
+                "longitude": 106.958975019
+              }
+            },
+            {
+              "id": 60,
+              "nama_tps": "TPS Kantor Kecamatan Cakung",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.184075037,
+                "longitude": 106.939949021
+              }
+            },
+            {
+              "id": 61,
+              "nama_tps": "TPS Kantor Walikota Kec. Cakung",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.214619027,
+                "longitude": 106.943568997
+              }
+            },
+            {
+              "id": 62,
+              "nama_tps": "TPS Liar Jln. Bekasi timur",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2048479909999,
+                "longitude": 106.903397972
+              }
+            },
+            {
+              "id": 63,
+              "nama_tps": "TPS Liar Jln. Cacing",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.180494037,
+                "longitude": 106.942808004
+              }
+            },
+            {
+              "id": 64,
+              "nama_tps": "TPS Liar Jln. Kandang Kuda 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2031100039999,
+                "longitude": 106.94591702
+              }
+            },
+            {
+              "id": 65,
+              "nama_tps": "TPS Liar Jln. Kober",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.206050962,
+                "longitude": 106.932960022
+              }
+            },
+            {
+              "id": 66,
+              "nama_tps": "TPS Liar Jln. Komarudin 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.186833018,
+                "longitude": 106.942728041
+              }
+            },
+            {
+              "id": 67,
+              "nama_tps": "TPS Liar Jln. Pulo Gebang",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.207757015,
+                "longitude": 106.956331031
+              }
+            },
+            {
+              "id": 68,
+              "nama_tps": "TPS Liar Jln. Rawa Kuning",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.209087977,
+                "longitude": 106.960903024
+              }
+            },
+            {
+              "id": 69,
+              "nama_tps": "TPS Liar Jln. Statsiun Cakung 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2164549999999,
+                "longitude": 106.952871988
+              }
+            },
+            {
+              "id": 70,
+              "nama_tps": "TPS Liar Jln. Statsiun Cakung 2",
+              "kode_kota": 0,
+              "kode_kecamatan": 0,
+              "kode_kelurahan": 0,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2188239769999,
+                "longitude": 106.951316977
+              }
+            },
+            {
+              "id": 71,
+              "nama_tps": "TPS Liar Jln. Statsiun Cakung 3",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2177510089999,
+                "longitude": 106.952463035
+              }
+            },
+            {
+              "id": 72,
+              "nama_tps": "TPS Liar Jln. Statsiun Cakung 4",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2150610049999,
+                "longitude": 106.951715034
+              }
+            },
+            {
+              "id": 73,
+              "nama_tps": "TPS Liar Jln. Tambun Renggas 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1748189849999,
+                "longitude": 106.96311702
+              }
+            },
+            {
+              "id": 74,
+              "nama_tps": "TPS Liar Jln. Tambun Renggas 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1710170379999,
+                "longitude": 106.962651992
+              }
+            },
+            {
+              "id": 75,
+              "nama_tps": "TPS Liar Jln. Tipar Cakung 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.174205011,
+                "longitude": 106.934952987
+              }
+            },
+            {
+              "id": 76,
+              "nama_tps": "TPS Liar Jln. Tipar Cakung 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1633269769999,
+                "longitude": 106.933715986
+              }
+            },
+            {
+              "id": 77,
+              "nama_tps": "TPS Liar Pinggir Tol Jln. Cakung Cilincing",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1825610139999,
+                "longitude": 106.943320977
+              }
+            },
+            {
+              "id": 78,
+              "nama_tps": "TPS Liar Sepanjang Jln. Rawa Kunyit",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.207387038,
+                "longitude": 106.961731995
+              }
+            },
+            {
+              "id": 79,
+              "nama_tps": "TPS Liar Taman Pulo Indah",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2017849929999,
+                "longitude": 106.937965024
+              }
+            },
+            {
+              "id": 80,
+              "nama_tps": "TPS Liar Ujung Krawang",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.193899969,
+                "longitude": 106.942559984
+              }
+            },
+            {
+              "id": 81,
+              "nama_tps": "TPS Rusun Griya Tipar",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1714430059999,
+                "longitude": 106.936138021
+              }
+            },
+            {
+              "id": 82,
+              "nama_tps": "TPS Rusun Komarudin",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2087900009999,
+                "longitude": 106.942323027
+              }
+            },
+            {
+              "id": 83,
+              "nama_tps": "TPS Rusun Pulo Gebang",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2008120209999,
+                "longitude": 106.949028969
+              }
+            },
+            {
+              "id": 84,
+              "nama_tps": "TPS Rusunawa Cakung Barat",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.167117022,
+                "longitude": 106.93303898
+              }
+            },
+            {
+              "id": 85,
+              "nama_tps": "TPS RW 06 Palad",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.183136012,
+                "longitude": 106.929052966
+              }
+            },
+            {
+              "id": 86,
+              "nama_tps": "TPS Ujung Menteng Jln. Raya Bekasi",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.188334972,
+                "longitude": 106.962671019
+              }
+            },
+            {
+              "id": 87,
+              "nama_tps": "TPS Ujung Menteng Rukem",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1798020269999,
+                "longitude": 106.961410968
+              }
+            },
+            {
+              "id": 88,
+              "nama_tps": "TPS Yuti",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1843089759999,
+                "longitude": 106.932344958
+              }
+            },
+            {
+              "id": 89,
+              "nama_tps": "TPS Jln. Irigasi 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.184636038,
+                "longitude": 106.955741029
+              }
+            },
+            {
+              "id": 90,
+              "nama_tps": "TPS Jln. Irigasi 3",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1838459599999,
+                "longitude": 106.947972011
+              }
+            },
+            {
+              "id": 91,
+              "nama_tps": "TPS Kp Pulo Jahe",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.194914011,
+                "longitude": 106.928337989
+              }
+            },
+            {
+              "id": 92,
+              "nama_tps": "TPS Liar Jln. Cakung Cilincing",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1833130379999,
+                "longitude": 106.942644976
+              }
+            },
+            {
+              "id": 93,
+              "nama_tps": "TPS Liar Jln. Kandang Kuda 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2080740179999,
+                "longitude": 106.948623033
+              }
+            },
+            {
+              "id": 94,
+              "nama_tps": "TPS Liar Jln. Komarudin 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2105999889999,
+                "longitude": 106.941055013
+              }
+            },
+            {
+              "id": 95,
+              "nama_tps": "TPS Rusun Vinus Blok A",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.200589985,
+                "longitude": 106.936946036
+              }
+            },
+            {
+              "id": 96,
+              "nama_tps": "TPS Rusun Vinus Blok B",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.198748983,
+                "longitude": 106.939631011
+              }
+            },
+            {
+              "id": 97,
+              "nama_tps": "TPS Ujung Menteng Rw 05",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172080,
+              "kode_kelurahan": 3172080004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.189039974,
+                "longitude": 106.967593962
+              }
+            },
+            {
+              "id": 98,
+              "nama_tps": "Door to door RW 3",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1753332979999,
+                "longitude": 106.861972259
+              }
+            },
+            {
+              "id": 99,
+              "nama_tps": "Door to door RW 6",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1775833369999,
+                "longitude": 106.868249969
+              }
+            },
+            {
+              "id": 100,
+              "nama_tps": "Door to door  RW 8",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1737222139999,
+                "longitude": 106.865805555
+              }
+            },
+            {
+              "id": 101,
+              "nama_tps": "LPS Jl. Cempaka Putih Tengah 33",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.179416627,
+                "longitude": 106.871444481
+              }
+            },
+            {
+              "id": 102,
+              "nama_tps": "TPS Dipo Rawasari",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.185167199,
+                "longitude": 106.873590919
+              }
+            },
+            {
+              "id": 103,
+              "nama_tps": "TPS Jl. Cempaka Putih Barat 2",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1742777659999,
+                "longitude": 106.860722182
+              }
+            },
+            {
+              "id": 104,
+              "nama_tps": "TPS Jl. Cempaka Putih Tengah 17",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.174027817,
+                "longitude": 106.872361125
+              }
+            },
+            {
+              "id": 105,
+              "nama_tps": "TPS Jl. Mardani Raya",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.185805564,
+                "longitude": 106.862638872
+              }
+            },
+            {
+              "id": 106,
+              "nama_tps": "TPS Jl. Percetakan Negara 5",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1926389119999,
+                "longitude": 106.85872226
+              }
+            },
+            {
+              "id": 107,
+              "nama_tps": "TPS Jl. Percetakan Negara 9",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.189388912,
+                "longitude": 106.861833371
+              }
+            },
+            {
+              "id": 108,
+              "nama_tps": "TPS Jl. Pramuka RW 2",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1958610829999,
+                "longitude": 106.858250023
+              }
+            },
+            {
+              "id": 109,
+              "nama_tps": "TPS Komplek TNI AL",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1904721889999,
+                "longitude": 106.871361081
+              }
+            },
+            {
+              "id": 110,
+              "nama_tps": "TPS Pasar Cempaka Putih",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.17266668,
+                "longitude": 106.863777805
+              }
+            },
+            {
+              "id": 111,
+              "nama_tps": "TPS Pasar Genjing",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1944722009999,
+                "longitude": 106.860333346
+              }
+            },
+            {
+              "id": 112,
+              "nama_tps": "TPS Pasar Jati Rawasari",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1836389269999,
+                "longitude": 106.863749977
+              }
+            },
+            {
+              "id": 113,
+              "nama_tps": "TPS Pasar Rawasari",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1855277879999,
+                "longitude": 106.872000033
+              }
+            },
+            {
+              "id": 114,
+              "nama_tps": "TPS RW 3",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.181833297,
+                "longitude": 106.874666652
+              }
+            },
+            {
+              "id": 115,
+              "nama_tps": "TPS Terpadu Rawasari",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173050,
+              "kode_kelurahan": 3173050002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.184900571,
+                "longitude": 106.873610196
+              }
+            },
+            {
+              "id": 116,
+              "nama_tps": "Door to door Jl. Beringin RW 02",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1523015889999,
+                "longitude": 106.7191137
+              }
+            },
+            {
+              "id": 117,
+              "nama_tps": "Door to door Jl. Raya Kosambi",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1772675899999,
+                "longitude": 106.720243329
+              }
+            },
+            {
+              "id": 118,
+              "nama_tps": "TPS Dipo Jl. Cendrawasih 10",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.143195406,
+                "longitude": 106.720051132
+              }
+            },
+            {
+              "id": 119,
+              "nama_tps": "TPS Dipo Jl. Randu",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1765168229999,
+                "longitude": 106.725223521
+              }
+            },
+            {
+              "id": 120,
+              "nama_tps": "TPS Dipo Kosambi Baru  RW 15",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174080,
+              "kode_kelurahan": 3174080001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1738121509999,
+                "longitude": 106.710573463
+              }
+            },
+            {
+              "id": 121,
+              "nama_tps": "TPS Dipo Kosambi RW 10",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.167877512,
+                "longitude": 106.715221982
+              }
+            },
+            {
+              "id": 122,
+              "nama_tps": "TPS Dipo Kosambi Timur RW 09",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.172562409,
+                "longitude": 106.71769171
+              }
+            },
+            {
+              "id": 123,
+              "nama_tps": "TPS Dipo RW 14 Cengkareng Timur",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.139012919,
+                "longitude": 106.737531591
+              }
+            },
+            {
+              "id": 124,
+              "nama_tps": "TPS Indoor Rusun BCI",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.134505803,
+                "longitude": 106.741215521
+              }
+            },
+            {
+              "id": 125,
+              "nama_tps": "TPS Jl. Komplek Pakuan RW 15",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.149597252,
+                "longitude": 106.740317903
+              }
+            },
+            {
+              "id": 126,
+              "nama_tps": "TPS Jl. Bangun Nusa 3",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.154082827,
+                "longitude": 106.729512541
+              }
+            },
+            {
+              "id": 127,
+              "nama_tps": "TPS Jl. Bangun Nusa RW 03",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.15221316,
+                "longitude": 106.737682968
+              }
+            },
+            {
+              "id": 128,
+              "nama_tps": "TPS Jl. Cengkareng Brain RW 04",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.15438642,
+                "longitude": 106.74855019
+              }
+            },
+            {
+              "id": 129,
+              "nama_tps": "TPS Jl. Cengkareng Brain RW 09",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.151927756,
+                "longitude": 106.74854273
+              }
+            },
+            {
+              "id": 130,
+              "nama_tps": "TPS Jl. Cengkareng Brain RW 13",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.152367387,
+                "longitude": 106.74820209
+              }
+            },
+            {
+              "id": 131,
+              "nama_tps": "TPS Jl. Daan Mogot RW 02",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.154775507,
+                "longitude": 106.740403985
+              }
+            },
+            {
+              "id": 132,
+              "nama_tps": "TPS  Jl. Darmawanita",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1565528899999,
+                "longitude": 106.728543425
+              }
+            },
+            {
+              "id": 133,
+              "nama_tps": "TPS Jl. Dongkelan RW 16",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.139337467,
+                "longitude": 106.745521725
+              }
+            },
+            {
+              "id": 134,
+              "nama_tps": "TPS Jl. Flamboyan",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1319186449999,
+                "longitude": 106.724840384
+              }
+            },
+            {
+              "id": 135,
+              "nama_tps": "TPS Jl. Hj. Nimin",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.163510457,
+                "longitude": 106.727740439
+              }
+            },
+            {
+              "id": 136,
+              "nama_tps": "TPS Jl. Kamal Raya",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1288890889999,
+                "longitude": 106.736420067
+              }
+            },
+            {
+              "id": 137,
+              "nama_tps": "TPS Jl. Komplek Depak",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.154602003,
+                "longitude": 106.762065338
+              }
+            },
+            {
+              "id": 138,
+              "nama_tps": "TPS Jl. Kosambi Baru RW 06",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.169545511,
+                "longitude": 106.72168401
+              }
+            },
+            {
+              "id": 139,
+              "nama_tps": "TPS Jl. Mawar RW 01",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.142298877,
+                "longitude": 106.769014355
+              }
+            },
+            {
+              "id": 140,
+              "nama_tps": "TPS Jl. Pesing Poglar RW 01",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.154198413,
+                "longitude": 106.769483741
+              }
+            },
+            {
+              "id": 141,
+              "nama_tps": "TPS Jl. Pesing Poglar RW 02",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1543051159999,
+                "longitude": 106.768192509
+              }
+            },
+            {
+              "id": 142,
+              "nama_tps": "TPS Jl. Peternakan RW 07",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.14867759,
+                "longitude": 106.76738441
+              }
+            },
+            {
+              "id": 143,
+              "nama_tps": "TPS Jl. Ringgut",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070001,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.167456908,
+                "longitude": 106.727113304
+              }
+            },
+            {
+              "id": 144,
+              "nama_tps": "TPS Jl. Ringgut RW 11",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1225190109999,
+                "longitude": 106.73121918
+              }
+            },
+            {
+              "id": 145,
+              "nama_tps": "TPS Jl. Siantan",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1466406189999,
+                "longitude": 106.722758738
+              }
+            },
+            {
+              "id": 146,
+              "nama_tps": "TPS Jl. Taman Palem",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1356828729999,
+                "longitude": 106.724177291
+              }
+            },
+            {
+              "id": 147,
+              "nama_tps": "TPS Jl. Tanggul RW 12",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1392710819999,
+                "longitude": 106.750798635
+              }
+            },
+            {
+              "id": 148,
+              "nama_tps": "TPS Kapuk Bongkaran",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.139384992,
+                "longitude": 106.75060208
+              }
+            },
+            {
+              "id": 149,
+              "nama_tps": "TPS Komplek KFT",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.136321994,
+                "longitude": 106.725282445
+              }
+            },
+            {
+              "id": 150,
+              "nama_tps": "TPS Liar Jl. Bojong",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.160448883,
+                "longitude": 106.740755187
+              }
+            },
+            {
+              "id": 151,
+              "nama_tps": "TPS Liar Jl. Krystal RW 07",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.144697945,
+                "longitude": 106.753114471
+              }
+            },
+            {
+              "id": 152,
+              "nama_tps": "TPS Liar Jl. Mogot",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174080,
+              "kode_kelurahan": 3174080002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.154733682,
+                "longitude": 106.715622722
+              }
+            },
+            {
+              "id": 153,
+              "nama_tps": "TPS Liar Jl. Rusun Bambu Kerangan",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1418884149999,
+                "longitude": 106.719613429
+              }
+            },
+            {
+              "id": 154,
+              "nama_tps": "TPS Liar RW 05 Cengkareng Barat",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.14035788,
+                "longitude": 106.720439969
+              }
+            },
+            {
+              "id": 155,
+              "nama_tps": "TPS Pasar Bojong",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1615569709999,
+                "longitude": 106.741552809
+              }
+            },
+            {
+              "id": 156,
+              "nama_tps": "TPS Pasar Jaya Ganefo",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.149654165,
+                "longitude": 106.721555851
+              }
+            },
+            {
+              "id": 157,
+              "nama_tps": "TPS Pasar PD Jaya Cengkareng",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.152506108,
+                "longitude": 106.729126219
+              }
+            },
+            {
+              "id": 158,
+              "nama_tps": "TPS Pasar UMKN Rawa Buaya",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.156293638,
+                "longitude": 106.728328596
+              }
+            },
+            {
+              "id": 159,
+              "nama_tps": "TPS RSUD Cengkareng",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.143575776,
+                "longitude": 106.73420758
+              }
+            },
+            {
+              "id": 160,
+              "nama_tps": "TPS Rusun BCI",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.1345626319999,
+                "longitude": 106.739258095
+              }
+            },
+            {
+              "id": 161,
+              "nama_tps": "TPS Rusun Flamboyan RW 10",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.130910469,
+                "longitude": 106.723814355
+              }
+            },
+            {
+              "id": 162,
+              "nama_tps": "TPS Rusun Guda Suci",
+              "kode_kota": 3174,
+              "kode_kecamatan": 3174070,
+              "kode_kelurahan": 3174070005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.132191894,
+                "longitude": 106.738748392
+              }
+            },
+            {
+              "id": 163,
+              "nama_tps": "Tps Bambu Kuning",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3129629749999,
+                "longitude": 106.896210993
+              }
+            },
+            {
+              "id": 164,
+              "nama_tps": "Tps Bambu Ulung",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.32074004,
+                "longitude": 106.90285801
+              }
+            },
+            {
+              "id": 165,
+              "nama_tps": "Tps BPPOM Cilangkap",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.33399996,
+                "longitude": 106.903041992
+              }
+            },
+            {
+              "id": 166,
+              "nama_tps": "Tps Ceger",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172020,
+              "kode_kelurahan": 3172020005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3178119899999,
+                "longitude": 106.887160968
+              }
+            },
+            {
+              "id": 167,
+              "nama_tps": "Tps Cengkeh",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030008,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.293196017,
+                "longitude": 106.906592986
+              }
+            },
+            {
+              "id": 168,
+              "nama_tps": "Tps Ci Eni",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.320845988,
+                "longitude": 106.89289704
+              }
+            },
+            {
+              "id": 169,
+              "nama_tps": "Tps Dipo Mawar",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3102749829999,
+                "longitude": 106.891037012
+              }
+            },
+            {
+              "id": 170,
+              "nama_tps": "Tps Gebang Sari",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3135180249999,
+                "longitude": 106.90308298
+              }
+            },
+            {
+              "id": 171,
+              "nama_tps": "Tps Gempol",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.310425019,
+                "longitude": 106.894353982
+              }
+            },
+            {
+              "id": 172,
+              "nama_tps": "Tps Gorda Kebon Jati",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030008,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2925050129999,
+                "longitude": 106.897560982
+              }
+            },
+            {
+              "id": 173,
+              "nama_tps": "Tps Indraloka",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3191230039999,
+                "longitude": 106.891871011
+              }
+            },
+            {
+              "id": 174,
+              "nama_tps": "Tps Kodam",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3131799829999,
+                "longitude": 106.891430961
+              }
+            },
+            {
+              "id": 175,
+              "nama_tps": "Tps Komplek Bina Marga",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3270559719999,
+                "longitude": 106.89075999
+              }
+            },
+            {
+              "id": 176,
+              "nama_tps": "Tps Komplek Kartika Jaya",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.314954013,
+                "longitude": 106.894161031
+              }
+            },
+            {
+              "id": 177,
+              "nama_tps": "Tps Komplek Kodam",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.314235013,
+                "longitude": 106.892248029
+              }
+            },
+            {
+              "id": 178,
+              "nama_tps": "Tps Komplek Munjul",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3494019579999,
+                "longitude": 106.891731033
+              }
+            },
+            {
+              "id": 179,
+              "nama_tps": "Tps Komplek PM",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.313223988,
+                "longitude": 106.892587999
+              }
+            },
+            {
+              "id": 180,
+              "nama_tps": "Tps Kopti",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3101230189999,
+                "longitude": 106.920960993
+              }
+            },
+            {
+              "id": 181,
+              "nama_tps": "Tps Liar Ayam",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.32702102,
+                "longitude": 106.896674009
+              }
+            },
+            {
+              "id": 182,
+              "nama_tps": "Tps Liar Cedang",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030008,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3014540359999,
+                "longitude": 106.912118001
+              }
+            },
+            {
+              "id": 183,
+              "nama_tps": "Tps Liar Manunggal",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030008,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.294910032,
+                "longitude": 106.891329037
+              }
+            },
+            {
+              "id": 184,
+              "nama_tps": "Tps Liar RT11 RW 3",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030002,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.346920999,
+                "longitude": 106.905730991
+              }
+            },
+            {
+              "id": 185,
+              "nama_tps": "Tps Madu Indah",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.311805015,
+                "longitude": 106.903804997
+              }
+            },
+            {
+              "id": 186,
+              "nama_tps": "Tps Malaka RT6",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.341296993,
+                "longitude": 106.893702038
+              }
+            },
+            {
+              "id": 187,
+              "nama_tps": "Tps Paharseno",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.311435038,
+                "longitude": 106.893654009
+              }
+            },
+            {
+              "id": 188,
+              "nama_tps": "Tps Panti Sosial Bina Insan Bangun Daya 2",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3197420069999,
+                "longitude": 106.891375976
+              }
+            },
+            {
+              "id": 189,
+              "nama_tps": "Tps Panti Sosial Tresna Werdha Budi Mulya 1",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3196639719999,
+                "longitude": 106.890137969
+              }
+            },
+            {
+              "id": 190,
+              "nama_tps": "Tps Pasar Munjul",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.350932997,
+                "longitude": 106.89202901
+              }
+            },
+            {
+              "id": 191,
+              "nama_tps": "Tps PBSI",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.337008979,
+                "longitude": 106.892424971
+              }
+            },
+            {
+              "id": 192,
+              "nama_tps": "Tps Perumahan Primer",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3076259659999,
+                "longitude": 106.910017999
+              }
+            },
+            {
+              "id": 193,
+              "nama_tps": "Tps Puskesmas Ceger",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030007,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.316214986,
+                "longitude": 106.892315
+              }
+            },
+            {
+              "id": 194,
+              "nama_tps": "Tps RT 1 RW 8",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030008,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.287226006,
+                "longitude": 106.901324037
+              }
+            },
+            {
+              "id": 195,
+              "nama_tps": "Tps RT 3 RW 12",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030008,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.288049025,
+                "longitude": 106.910008024
+              }
+            },
+            {
+              "id": 196,
+              "nama_tps": "Tps RT 4 RW 6",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030004,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3242509679999,
+                "longitude": 106.894940967
+              }
+            },
+            {
+              "id": 197,
+              "nama_tps": "Tps RT 5 RW 5",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030005,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.311495975,
+                "longitude": 106.913319966
+              }
+            },
+            {
+              "id": 198,
+              "nama_tps": "Tps RT 6 Printis",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172020,
+              "kode_kelurahan": 3172020003,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3192380029999,
+                "longitude": 106.887294995
+              }
+            },
+            {
+              "id": 199,
+              "nama_tps": "Tps RT 7 RW 10",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030008,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.2939440179999,
+                "longitude": 106.909091966
+              }
+            },
+            {
+              "id": 200,
+              "nama_tps": "Tps Samsir",
+              "kode_kota": 3172,
+              "kode_kecamatan": 3172030,
+              "kode_kelurahan": 3172030006,
+              "location": {
+                "alamat": 0,
+                "latitude": -6.3130779749999,
+                "longitude": 106.904502036
+              }
+            }
+          ],
+          "meta": {
+            "pagination": {
+                "total": 1899,
+                "count": 200,
+                "per_page": 200,
+                "current_page": 1,
+                "total_pages": 10,
+                "links": {
+                    "next": "http://api-jakgo.fzlrhmn.com/api/v1/tps?page=2"
+                }
+            }
+        }
+    }
+
+## Rumah Sakit Umum [/api/v1/rumahsakitumum/{id}?api_token={api_token}&shape={shape}&format={format}]
+
+### Data Rumah Sakit Umum [GET]
+
++ Parameters
+    + id (required, array, `1`) ... id of the Rumah Sakit Umum (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Rumah Sakit Umum will include in API.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+
++ Response 200 (application/json)
+    {
+        "status": "success",
+        "count": 1,
+        "data": [
+        {
+          "id": 2,
+          "nama_rsu": "Tarakan",
+          "jenis_rsu": "Rumah Sakit Umum Daerah",
+          "location": {
+            "alamat": "Jl. Kyai Caringin No. 7",
+            "latitude": -6.171333,
+            "longitude": 106.810013
+          },
+          "kode_pos": 10150,
+          "telepon": [
+            "3503150",
+            "3503003",
+            "3508993"
+          ],
+          "faximile": [
+            "3503412",
+            " 3863309"
+          ],
+          "website": "www.rstarakanjakarta.com",
+          "email": "kusmedi@gmail.com, rsd_tarakan@yahoo.com",
+          "kode_kota": 3173,
+          "kode_kecamatan": 3173080,
+          "kode_kelurahan": 3173080001,
+          "latitude": -6.171333,
+          "longitude": 106.810013
+        }
+      ]
+    }
+
+## Rumah Sakit Khusus [/api/v1/rumahsakitkhusus/{id}?api_token={api_token}&shape={shape}&format={format}]
+
+### Data Rumah Sakit Khusus [GET]
+
++ Parameters
+    + id (required, array, `1`) ... id of the Rumah Sakit Khusus (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Rumah Sakit Khusus will include in API.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+
++ Response 200 (application/json)
+    {
+        "status": "success",
+        "count": 1,
+        "data": [
+            {
+              "id": 1,
+              "nama_rsk": "Budi Kemuliaan ",
+              "jenis_rsk": "Rumah Sakit Khusus Ibu dan Anak",
+              "location": {
+                "alamat": "Jl. Budi Kemuliaan No. 25 ",
+                "latitude": -6.180302,
+                "longitude": 106.81826
+              },
+              "kode_pos": 10110,
+              "telepon": [
+                "3842828"
+              ],
+              "faximile": [
+                "3501012"
+              ],
+              "website": "www.rsbbudikemiaan.com",
+              "email": "rsbbudi@indo.net.id",
+              "kode_kota": 3173,
+              "kode_kecamatan": 3173080,
+              "kode_kelurahan": 3173080003,
+              "latitude": -6.180302,
+              "longitude": 106.81826
+            }
+        ]
+    }
+
+## Puskesmas [/api/v1/puskesmas/{id}?api_token={api_token}&shape={shape}&format={format}]
+
+### Puskesmas [GET]
+
++ Parameters
+    + id (required, array, `1`) ... id of the Puskesmas (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Puskesmas will include in API.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+
++ Response 200 (application/json)
+    {
+        "status": "success",
+        "count": 1,
+        "data": [
+            {
+              "id": 1,
+              "nama_Puskesmas": "PUSKESMAS KECAMATAN JAGAKARSA",
+              "location": {
+                "alamat": "Jl. M. Khafi",
+                "latitude": -6.351944,
+                "longitude": 106.814163
+              },
+              "telepon": [
+                "7864707"
+              ],
+              "faximile": [
+                "7864707"
+              ],
+              "email": "puskesmas_kecamatanjagakarsa@yahoo.co.id",
+              "kepala_puskesmas": "drg. Dewi Isnawati Q.I",
+              "kode_kota": 3171,
+              "kode_kecamatan": 3171010,
+              "kode_kelurahan": 3171010002
+            }
+        ]
+    }
