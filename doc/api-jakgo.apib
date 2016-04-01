@@ -14,14 +14,13 @@ Sample Calls:
 **Batas Administrasi Kelurahan**
 [api-jakgo.fzlrhmn.com/api/v1/kelurahan?api_token=q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk&shape=true](http://api-jakgo.fzlrhmn.com/api/v1/kelurahan?api_token=q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk&shape=true)
 
-## Kota [/api/v1/kota/{kode_kota}?api_token={api_token}&shape={shape}&format={format}]
+## Kota [/api/v1/kota/{kode_kota}?api_token={api_token}&format={format}]
 
 ### Data Kota [GET]
 
 + Parameters
-    + kode_kota (required, array, `3174`) ... kode_kota of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174,3175'.
+    + kode_kota (optional, array, `3174`) ... kode_kota of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174,3175'.
     + format (optional, string, `geojson`) ... String of the response format that the response will show.
-    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Kota will include in API.
     + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
 
 + Response 200 (application/json)
@@ -62,14 +61,13 @@ Sample Calls:
         ]
     }
 
-## Kecamatan [/api/v1/kecamatan/{kode_kecamatan}?api_token={api_token}&shape={shape}&format={format}]
+## Kecamatan [/api/v1/kecamatan/{kode_kecamatan}?api_token={api_token}&format={format}]
 
 ### Data Kecamatan [GET]
 
 + Parameters
-    + kode_kecamatan (required, array, `3175060`) ... kode_kecamatan of the kecamatan itself, use comma without whitespace if want to get more than one data, i.e '3172040,3172050'.
+    + kode_kecamatan (optional, array, `3175060`) ... kode_kecamatan of the kecamatan itself, use comma without whitespace if want to get more than one data, i.e '3172040,3172050'.
     + format (optional, string, `geojson`) ... String of the response format that the response will show.
-    + shape (optional, string, `true`) ... String if true that geometry in WKT string of kecamatan will include in API.
     + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
 
 + Response 200 (application/json)
@@ -417,14 +415,13 @@ Sample Calls:
           ]
         }
         
-## Kelurahan [/api/v1/kelurahan/{kode_kelurahan}?api_token={api_token}&shape={shape}&format={format}]
+## Kelurahan [/api/v1/kelurahan/{kode_kelurahan}?api_token={api_token}&format={format}]
 
 ### Data Kelurahan [GET]
 
 + Parameters
-    + kode_kelurahan (required, array, `3174020007`) ... kode_kelurahan of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174020007,3174020006'.
+    + kode_kelurahan (optional, array, `3174020007`) ... kode_kelurahan of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174020007,3174020006'.
     + format (optional, string, `geojson`) ... String of the response format that the response will show.
-    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Kelurahan will include in API.
     + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
     
 + Response 200 (application/json)
@@ -465,14 +462,13 @@ Sample Calls:
         ]
     }
 
-## RW [/api/v1/rw/{kode_rw}?api_token={api_token}&shape={shape}&format={format}&page={page}]
+## RW [/api/v1/rw/{kode_rw}?api_token={api_token}&format={format}&page={page}]
 
 ### Data RW [GET]
 
 + Parameters
-    + kode_rw (required, array, `3174070005001000`) ... kode_rw of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174070005001000,3174070005002000'.
+    + kode_rw (optional, array, `3174070005001000`) ... kode_rw of the kota (city) itself. use comma without whitespace if want to get more than one data, i.e '3174070005001000,3174070005002000'.
     + format (optional, string, `geojson`) ... String of the response format that the response will show.
-    + shape (optional, string, `true`) ... String if true that geometry in WKT string of RW will include in API.
     + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
     + page (required, string, `1`) ... Number of page that show. This API show 200 RW per call.
 
@@ -2494,14 +2490,13 @@ Sample Calls:
             }
         }
 
-## TPS [/api/v1/tps/{id}?api_token={api_token}&shape={shape}&format={format}&page={page}]
+## TPS [/api/v1/tps/{id}?api_token={api_token}&format={format}&page={page}]
 
 ### Data TPS [GET]
 
 + Parameters
-    + id (required, array, `1`) ... id of the TPS itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + id (optional, array, `1`) ... id of the TPS itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
     + format (optional, string, `geojson`) ... String of the response format that the response will show.
-    + shape (optional, string, `true`) ... String if true that geometry in WKT string of TPS will include in API.
     + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
     + page (required, string, `1`) ... Number of page that show. This API show 200 RW per call.
 
@@ -4923,14 +4918,13 @@ Sample Calls:
         }
     }
 
-## Rumah Sakit Umum [/api/v1/rumahsakitumum/{id}?api_token={api_token}&shape={shape}&format={format}]
+## Rumah Sakit Umum [/api/v1/rumahsakitumum/{id}?api_token={api_token}&format={format}]
 
 ### Data Rumah Sakit Umum [GET]
 
 + Parameters
-    + id (required, array, `1`) ... id of the Rumah Sakit Umum (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + id (optional, array, `1`) ... id of the Rumah Sakit Umum (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
     + format (optional, string, `geojson`) ... String of the response format that the response will show.
-    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Rumah Sakit Umum will include in API.
     + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
 
 + Response 200 (application/json)
@@ -4968,14 +4962,13 @@ Sample Calls:
       ]
     }
 
-## Rumah Sakit Khusus [/api/v1/rumahsakitkhusus/{id}?api_token={api_token}&shape={shape}&format={format}]
+## Rumah Sakit Khusus [/api/v1/rumahsakitkhusus/{id}?api_token={api_token}&format={format}]
 
 ### Data Rumah Sakit Khusus [GET]
 
 + Parameters
-    + id (required, array, `1`) ... id of the Rumah Sakit Khusus (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + id (optional, array, `1`) ... id of the Rumah Sakit Khusus (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
     + format (optional, string, `geojson`) ... String of the response format that the response will show.
-    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Rumah Sakit Khusus will include in API.
     + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
 
 + Response 200 (application/json)
@@ -5010,14 +5003,13 @@ Sample Calls:
         ]
     }
 
-## Puskesmas [/api/v1/puskesmas/{id}?api_token={api_token}&shape={shape}&format={format}]
+## Puskesmas [/api/v1/puskesmas/{id}?api_token={api_token}&format={format}]
 
-### Puskesmas [GET]
+### Data Puskesmas [GET]
 
 + Parameters
-    + id (required, array, `1`) ... id of the Puskesmas (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + id (optional, array, `1`) ... id of the Puskesmas (Hospital) itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
     + format (optional, string, `geojson`) ... String of the response format that the response will show.
-    + shape (optional, string, `true`) ... String if true that geometry in WKT string of Puskesmas will include in API.
     + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
 
 + Response 200 (application/json)
