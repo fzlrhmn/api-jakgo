@@ -2490,9 +2490,9 @@ Sample Calls:
             }
         }
 
-## TPS [/api/v1/tps/{id}?api_token={api_token}&format={format}&page={page}]
+## Tempat Pembuangan Sampah Sementara [/api/v1/tps/{id}?api_token={api_token}&format={format}&page={page}]
 
-### Data TPS [GET]
+### Data Tempat Pembuangan Sampah Sementara [GET]
 
 + Parameters
     + id (optional, array, `1`) ... id of the TPS itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
@@ -5038,4 +5038,31 @@ Sample Calls:
               "kode_kelurahan": 3171010002
             }
         ]
+    }
+
+## CCTV Balitower [/api/v1/cctvbalitower/{id}?api_token={api_token}&format={format}]
+
+### Data CCTV Balitower [GET]
+
++ Parameters
+    + id (optional, array, `1`) ... id of the CCTV id itself. use comma without whitespace if want to get more than one data, i.e '1,2'.
+    + format (optional, string, `geojson`) ... String of the response format that the response will show.
+    + api_token (required, string, `q06qb1eTOimT7sc9nMQfkzCKBYEzePXwYbWpEaEk`) ... String `api_token` of the application.
+
++ Response 200 (application/json)
+    {
+      "status": "success",
+      "count": 1,
+      "data": [
+        {
+          "id": 1,
+          "id_site": "JB_Pospam_Kota_Paris_1",
+          "nama_site": 0,
+          "url": "http://cctv.balitower.co.id/JB_Pospam_Kota_Paris_1/embed.html",
+          "location": {
+            "latitude": -6.17729,
+            "longitude": 106.8517
+          }
+        }
+      ]
     }

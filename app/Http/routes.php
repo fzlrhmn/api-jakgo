@@ -168,4 +168,14 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']
      * GET TPS {id}
      */
     Route::get('/tps/{id}', 'KebersihanTps@getTpsById');
+
+    /**
+     * GET CCTV balitower
+     */
+    Route::get('/cctvbalitower', 'CctvBalitowerController@getCctvBalitower');
+
+    /**
+     * GET CCTV balitower{id}
+     */
+    Route::get('/cctvbalitower/{id}', 'CctvBalitowerController@getCctvBalitowerById');
 });
