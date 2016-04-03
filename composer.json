@@ -12,7 +12,8 @@
         "spatie/laravel-fractal": "^1.8",
         "emcconville/google-map-polyline-encoding-tool" : ">=1.2.1",
         "anlutro/curl": "^1.4",
-        "guzzlehttp/guzzle": "~6.0"
+        "guzzlehttp/guzzle": "~6.0",
+        "barryvdh/laravel-cors": "^0.8.0"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",

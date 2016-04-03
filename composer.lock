@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "78cb0c42c3262fdfdd26bdc2585a1f44",
-    "content-hash": "c7c455145bb491818a3a62ab7cd89d7b",
+    "hash": "f6d379a33360c997c49342ec9d9f9891",
+    "content-hash": "ef97ac1e29985efd6e1d3a035af2b857",
     "packages": [
         {
             "name": "anlutro/curl",
@@ -45,6 +45,59 @@
             ],
             "description": "Simple OOP cURL wrapper.",
             "time": "2016-03-23 16:09:50"
+        },
+        {
+            "name": "barryvdh/laravel-cors",
+            "version": "v0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/barryvdh/laravel-cors.git",
+                "reference": "39975d7505757488f982ca132bcd02c704792fd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/barryvdh/laravel-cors/zipball/39975d7505757488f982ca132bcd02c704792fd8",
+                "reference": "39975d7505757488f982ca132bcd02c704792fd8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.1.x|5.2.x",
+                "php": ">=5.5.9",
+                "symfony/http-foundation": "~2.7|~3.0",
+                "symfony/http-kernel": "~2.7|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Barryvdh\\Cors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Barry vd. Heuvel",
+                    "email": "barryvdh@gmail.com"
+                }
+            ],
+            "description": "Adds CORS (Cross-Origin Resource Sharing) headers support in your Laravel application",
+            "keywords": [
+                "api",
+                "cors",
+                "crossdomain",
+                "laravel"
+            ],
+            "time": "2016-02-11 18:38:09"
         },
         {
             "name": "classpreloader/classpreloader",
