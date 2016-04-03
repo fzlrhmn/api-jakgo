@@ -160,6 +160,7 @@ return [
          * Custom Service Providers...
          */
         Spatie\Fractal\FractalServiceProvider::class,
+        'Barryvdh\Cors\ServiceProvider',
 
     ],
 

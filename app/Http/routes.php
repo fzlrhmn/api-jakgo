@@ -26,7 +26,7 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150']], function () {
+Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150', 'cors']], function () {
     Auth::guard('api')->user();
 
     /**
