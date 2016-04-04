@@ -90,6 +90,11 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150',
     Route::get('/kelurahan/{id}', 'GeoKelurahanController@getKelurahanById');
 
     /**
+     * GET List Kelurahan By Kode Kecamatan $id
+     */
+    Route::get('/kelurahan/kecamatan/{id}', 'GeoKelurahanController@getKelurahanByKodeKecamatan');
+
+    /**
      * GET List RW
      */
     Route::get('/rw', 'GeoRwController@getRw');

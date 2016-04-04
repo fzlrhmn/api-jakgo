@@ -41,6 +41,23 @@ class GeoKelurahanController extends Controller
     }
 
     /**
+     * @param $id
+     * @return array|\Illuminate\Http\JsonResponse|null
+     */
+    public function getKelurahanByKodeKecamatan ( $id) {
+
+        # query with selected columns from getColumns
+        $resultKelurahan = DB::table('geo_kelurahan')
+            ->select($this->getColumns())
+            ->where('deleted', 0)
+            ->where('kode_kecamatan',explode(",",$id))
+            ->get();
+
+        # return with generateResult() function
+        return $this->generateResult($resultKelurahan);
+    }
+
+    /**
      * @param $resultKelurahan
      * @return array|\Illuminate\Http\JsonResponse|null
      */
