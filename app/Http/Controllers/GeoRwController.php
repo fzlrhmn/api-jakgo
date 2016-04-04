@@ -44,6 +44,23 @@ class GeoRwController extends Controller
     }
 
     /**
+     * @param $id
+     * @return array|\Illuminate\Http\JsonResponse|null
+     */
+    public function getRwByKodeKelurahan ( $id) {
+
+        # query with selected columns from getColumns
+        $resultRw = DB::table('geo_rw')
+            ->select($this->getColumns())
+            ->where('deleted', 0)
+            ->where('kode_kelurahan',explode(",",$id))
+            ->get();
+
+        # return with generateResult() function
+        return $this->generateResultWithoutPaging($resultRw);
+    }
+
+    /**
      * @param $resultRw
      * @return array|\Illuminate\Http\JsonResponse|null
      */

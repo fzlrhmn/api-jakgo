@@ -105,6 +105,11 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150',
     Route::get('/rw/{id}', 'GeoRwController@getRwById');
 
     /**
+     * GET List RW By Kode Kelurahan $id
+     */
+    Route::get('/rw/kelurahan/{id}', 'GeoRwController@getRwByKodeKelurahan');
+
+    /**
      * GET Museum
      */
     Route::get('/museum', 'PariwisataMuseumController@getMuseum');
