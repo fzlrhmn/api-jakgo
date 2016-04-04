@@ -53,7 +53,7 @@ class GeoRwController extends Controller
         $resultRw = DB::table('geo_rw')
             ->select($this->getColumns())
             ->where('deleted', 0)
-            ->where('kode_kelurahan',explode(",",$id))
+            ->where('kode_kelurahan',$id)
             ->get();
 
         # return with generateResult() function

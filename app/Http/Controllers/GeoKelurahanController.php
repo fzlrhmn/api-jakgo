@@ -50,7 +50,7 @@ class GeoKelurahanController extends Controller
         $resultKelurahan = DB::table('geo_kelurahan')
             ->select($this->getColumns())
             ->where('deleted', 0)
-            ->where('kode_kecamatan',explode(",",$id))
+            ->where('kode_kecamatan',$id)
             ->get();
 
         # return with generateResult() function

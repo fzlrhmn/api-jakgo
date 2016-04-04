@@ -54,7 +54,7 @@ class GeoKecamatanController extends Controller
         $resultKecamatan = DB::table('geo_kecamatan')
             ->select($this->getColumns())
             ->where('deleted', 0)
-            ->where('kode_kota',explode(',',$id))
+            ->where('kode_kota',$id)
             ->get();
 
         # return with generateResult() function
