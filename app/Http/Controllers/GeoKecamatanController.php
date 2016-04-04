@@ -45,6 +45,23 @@ class GeoKecamatanController extends Controller
     }
 
     /**
+     * @param $id
+     * @return array|\Illuminate\Http\JsonResponse|null
+     */
+    public function getKecamatanByKodeKota ( $id ) {
+
+        # query with selected columns from getColumns
+        $resultKecamatan = DB::table('geo_kecamatan')
+            ->select($this->getColumns())
+            ->where('deleted', 0)
+            ->where('kode_kota',explode(',',$id))
+            ->get();
+
+        # return with generateResult() function
+        return $this->generateResult($resultKecamatan);
+    }
+
+    /**
      * @param $resultKecamatan
      * @return array|\Illuminate\Http\JsonResponse|null
      */

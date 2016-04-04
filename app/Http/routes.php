@@ -37,28 +37,18 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150',
      *
      * GET CCTV Balitower
      */
-    Route::get('/cctv/balitower', 'CctvController@getBalitowerCctv');
+    //Route::get('/cctv/balitower', 'CctvController@getBalitowerCctv');
 
     /**
      * @params id
      * GET CCTV Balitower
      */
-    Route::get('/cctv/balitower/{id}', 'CctvController@getBalitowerCctvDetail');
+    //Route::get('/cctv/balitower/{id}', 'CctvController@getBalitowerCctvDetail');
 
     /**
      *
      */
-    Route::get('/musrenbang/2014', 'MusrenbangController@getMusrenbang2014');
-
-    /**
-     *
-     */
-    Route::get('/musrenbang/2015', 'MusrenbangController@getMusrenbang2015');
-
-    /**
-     *
-     */
-    Route::get('/cctv/bitek', 'ApiCctvBitekController@getCctvBitek');
+    //Route::get('/cctv/bitek', 'ApiCctvBitekController@getCctvBitek');
 
     /**
      * -------------- STABLE ---------------
@@ -83,6 +73,11 @@ Route::group(['prefix' => 'api/v1', 'middleware' => ['auth:api', 'throttle:150',
      * GET List Kecamatan $id
      */
     Route::get('/kecamatan/{id}', 'GeoKecamatanController@getKecamatanById');
+
+    /**
+     * GET List Kecamatan By Kode Kota$id
+     */
+    Route::get('/kecamatan/kota/{id}', 'GeoKecamatanController@getKecamatanByKodeKota');
 
     /**
      * GET List Kelurahan
