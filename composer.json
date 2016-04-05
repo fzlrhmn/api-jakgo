@@ -13,7 +13,8 @@
         "emcconville/google-map-polyline-encoding-tool" : ">=1.2.1",
         "anlutro/curl": "^1.4",
         "guzzlehttp/guzzle": "~6.0",
-        "barryvdh/laravel-cors": "^0.8.0"
+        "barryvdh/laravel-cors": "^0.8.0",
+        "elasticquent/elasticquent": "dev-master"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",
