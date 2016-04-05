@@ -133,7 +133,7 @@ class GeoRwController extends Controller
             $transform = fractal()
                 ->collection($resultRw)
                 ->transformWith(function($rw) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'kode_kota' => (int) $rw->kode_kota,
                             'nama_kota' => $rw->nama_kota,
@@ -224,7 +224,7 @@ class GeoRwController extends Controller
             $transform = fractal()
                 ->collection($resultRw)
                 ->transformWith(function($rw) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'kode_kota' => (int) $rw->kode_kota,
                             'nama_kota' => $rw->nama_kota,

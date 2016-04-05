@@ -105,7 +105,7 @@ class TransportasiRuteBusway extends Controller
             $transform = fractal()
                 ->collection($resultRuteBusway)
                 ->transformWith(function($rutebusway) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'id' => (int) $rutebusway->id,
                             'halte' => $rutebusway->nama_halte,

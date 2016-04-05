@@ -111,7 +111,7 @@ class PariwisataMuseumController extends Controller
             $transform = fractal()
                 ->collection($resultMuseum)
                 ->transformWith(function($museum) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'id' => (int) $museum->id,
                             'nama_museum' => $museum->nama,

@@ -117,7 +117,7 @@ class KesehatanRsuController extends Controller
             $transform = fractal()
                 ->collection($resultRsu)
                 ->transformWith(function($rsu) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'id' => (int) $rsu->id,
                             'nama_rsu' => $rsu->nama,

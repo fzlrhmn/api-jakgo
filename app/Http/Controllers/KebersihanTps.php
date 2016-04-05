@@ -118,7 +118,7 @@ class KebersihanTps extends Controller
             $transform = fractal()
                 ->collection($resultTps)
                 ->transformWith(function($tps) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'id' => (int) $tps->id,
                             'nama_tps' => $tps->nama_tps,

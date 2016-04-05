@@ -117,7 +117,7 @@ class KesehatanRskController extends Controller
             $transform = fractal()
                 ->collection($resultRsk)
                 ->transformWith(function($rsk) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'id' => (int) $rsk->id,
                             'nama_rsk' => $rsk->nama,

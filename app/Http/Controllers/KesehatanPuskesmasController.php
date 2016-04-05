@@ -115,7 +115,7 @@ class KesehatanPuskesmasController extends Controller
             $transform = fractal()
                 ->collection($resultPuskesmas)
                 ->transformWith(function($puskesmas) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'id' => (int) $puskesmas->id,
                             'nama_Puskesmas' => $puskesmas->nama,

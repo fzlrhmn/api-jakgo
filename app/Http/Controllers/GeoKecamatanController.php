@@ -132,7 +132,7 @@ class GeoKecamatanController extends Controller
             $transform = fractal()
                 ->collection($resultKecamatan)
                 ->transformWith(function($kota) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'kode_provinsi' => (int) $kota->kode_provinsi,
                             'nama_provinsi' => $kota->nama_provinsi,

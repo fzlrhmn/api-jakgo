@@ -109,7 +109,7 @@ class CctvBalitowerController extends Controller
             $transform = fractal()
                 ->collection($resultCctvBalitower)
                 ->transformWith(function($cctvBalitower) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'id' => (int) $cctvBalitower->cctv_id,
                             'id_site' => $cctvBalitower->site_id,
@@ -121,7 +121,7 @@ class CctvBalitowerController extends Controller
                             ],
                             'geometry' => $cctvBalitower->geometry_text
                         ];
-                    }elseif ( \Request::has('shape') && \Request::input('shape') != true ){
+                    }elseif ( \Request::has('shape') && \Request::input('shape') != 'true' ){
                         return [
                             'id' => (int) $cctvBalitower->cctv_id,
                             'id_site' => $cctvBalitower->site_id,

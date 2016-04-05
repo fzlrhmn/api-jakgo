@@ -105,7 +105,7 @@ class GeoKotaController extends Controller
             $transform = fractal()
                 ->collection($resultKota)
                 ->transformWith(function($kota) {
-                    if ( \Request::has('shape') && \Request::input('shape') == true ) {
+                    if ( \Request::has('shape') && \Request::input('shape') == 'true' ) {
                         return [
                             'kode_provinsi' => (int) $kota->kode_provinsi,
                             'nama_provinsi' => $kota->nama_provinsi,
@@ -113,7 +113,7 @@ class GeoKotaController extends Controller
                             'nama_kota' => $kota->nama_kota,
                             'geometry' => $kota->geometry_text
                         ];
-                    }elseif ( \Request::has('shape') && \Request::input('shape') != true ){
+                    }elseif ( \Request::has('shape') && \Request::input('shape') != 'true' ){
                         return [
                             'kode_provinsi' => (int) $kota->kode_provinsi,
                             'nama_provinsi' => $kota->nama_provinsi,
